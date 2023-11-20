@@ -39,7 +39,7 @@ const config = {
   },
 
   markdown: {
-    format: 'mdx',
+    format: 'detect',
     mermaid: true,
   },
 
@@ -128,6 +128,7 @@ const config = {
               },
             ],
           },
+          { to: 'pathname:///blog/rss.xml', label: "RSS", position: 'left' },
           {
             type: 'dropdown',
             label: '我的',
