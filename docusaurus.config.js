@@ -91,12 +91,12 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      announcementBar: {
-        id: 'welcome',
-        content:
-          'SQYBI.com 正式上线！欢迎访问！',
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'welcome',
+      //   content:
+      //     'SQYBI.com 正式上线！欢迎访问！',
+      //   isCloseable: true,
+      // },
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
@@ -130,7 +130,7 @@ const config = {
           },
           {
             type: 'dropdown',
-            label: '外部链接',
+            label: '我的',
             position: 'right',
             items: [
               {
