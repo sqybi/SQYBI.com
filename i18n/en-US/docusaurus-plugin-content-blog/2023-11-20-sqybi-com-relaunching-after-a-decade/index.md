@@ -11,6 +11,9 @@ toc_min_heading_level: 2
 toc_max_heading_level: 4
 last_translated_at: 2023-11-22T06:44:25.959Z
 ---
+
+> (This article was translated by ChatGPT automatically.)
+
 For the past decade, the homepage of SQYBI.com has always featured the following text:
 
 > Since my DreamHost hosting is out-of-date, I moved SQYBI.com to Linode VPS. However it will take a period of time to write a new blog application and import old data. Please be patient, SQYBI.com will come back!

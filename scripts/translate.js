@@ -74,7 +74,10 @@ const translateFile = async (filePath, targetLang) => {
         const frontmatter = frontmatterMatch ? frontmatterMatch[1] : '';
         const mainContent = frontmatterMatch ? frontmatterMatch[2] : fileContent;
         const translatedMainContent = await translate(mainContent, targetLang);
-        const translatedFullContent = `---\n${frontmatter}\nlast_translated_at: ${lastEditedTime.toISOString()}\n---\n${translatedMainContent}`;
+        const translatedFullContent =
+            `---\n${frontmatter}\nlast_translated_at: ${lastEditedTime.toISOString()}\n---\n\n`
+            + '> (This article was translated by ChatGPT automatically.)\n\n'
+            + translatedMainContent;
 
         fs.writeFileSync(translationPath, translatedFullContent);
         console.log('Done.');
