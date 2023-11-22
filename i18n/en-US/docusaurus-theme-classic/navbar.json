@@ -1,0 +1,62 @@
+{
+  "title": {
+    "message": "SQYBI.com",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "SQYBI.com Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.博客": {
+    "message": "Blog",
+    "description": "Navbar item with label 博客"
+  },
+  "item.label.文章分类": {
+    "message": "Categories",
+    "description": "Navbar item with label 文章分类"
+  },
+  "item.label.RSS": {
+    "message": "RSS",
+    "description": "Navbar item with label RSS"
+  },
+  "item.label.我的": {
+    "message": "Mine",
+    "description": "Navbar item with label 我的"
+  },
+  "item.label.碎碎念": {
+    "message": "Random",
+    "description": "Navbar item with label 碎碎念"
+  },
+  "item.label.计算机技术": {
+    "message": "Technology",
+    "description": "Navbar item with label 计算机技术"
+  },
+  "item.label.摄影": {
+    "message": "Photography",
+    "description": "Navbar item with label 摄影"
+  },
+  "item.label.✈️ Telegram": {
+    "message": "✈️ Telegram",
+    "description": "Navbar item with label ✈️ Telegram"
+  },
+  "item.label.🐱 GitHub": {
+    "message": "🐱 GitHub",
+    "description": "Navbar item with label 🐱 GitHub"
+  },
+  "item.label.📷 Flickr": {
+    "message": "📷 Flickr",
+    "description": "Navbar item with label 📷 Flickr"
+  },
+  "item.label.📺 Bilibili": {
+    "message": "📺 Bilibili",
+    "description": "Navbar item with label 📺 Bilibili"
+  },
+  "item.label.🐦 Twitter": {
+    "message": "🐦 Twitter",
+    "description": "Navbar item with label 🐦 Twitter"
+  },
+  "item.label.📘 Facebook": {
+    "message": "📘 Facebook",
+    "description": "Navbar item with label 📘 Facebook"
+  }
+}

@@ -6,6 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 export default function BlogPostItemWrapper(props) {
   const {
     siteConfig: {customFields},
+    i18n: {currentLocale},
   } = useDocusaurusContext();
   return (
     <>
@@ -22,7 +23,7 @@ export default function BlogPostItemWrapper(props) {
         emitMetadata="0"
         inputPosition="top"
         theme="preferred_color_scheme"
-        lang="zh-CN"
+        lang={currentLocale}
         loading="lazy"
         crossorigin="anonymous"
         async
