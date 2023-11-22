@@ -359,5 +359,14 @@
   "theme.unlistedContent.message": {
     "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
     "description": "The unlisted content banner message"
+  },
+  "计算机技术": {
+    "message": "Technology"
+  },
+  "摄影": {
+    "message": "Photography"
+  },
+  "我自己": {
+    "message": "Myself"
   }
 }

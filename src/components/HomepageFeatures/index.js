@@ -5,7 +5,9 @@ import Translate from '@docusaurus/Translate';
 
 const FeatureList = [
   {
-    title: '计算机技术',
+    title: (
+      <Translate>计算机技术</Translate>
+    ),
     description: (
       <>
         <p>
@@ -21,7 +23,9 @@ const FeatureList = [
     ),
   },
   {
-    title: '摄影',
+    title: (
+      <Translate>摄影</Translate>
+    ),
     description: (
       <>
         <p>
@@ -38,7 +42,9 @@ const FeatureList = [
     ),
   },
   {
-    title: '我自己',
+    title: (
+      <Translate>我自己</Translate>
+    ),
     description: (
       <>
         <p>
@@ -60,7 +66,7 @@ function Feature({ title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3"><Translate>{title}</Translate></Heading>
+        <Heading as="h3">{title}</Heading>
         <p className="text--left">{description}</p>
       </div>
     </div>
