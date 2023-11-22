@@ -1,173 +1,171 @@
 ---
 slug: sqybi-com-relaunching-after-a-decade
-title: SQYBI.com：时隔十年的重新上线
+title: "SQYBI.com: Relaunching After a Decade"
 authors: [sqybi]
 date: 2023-11-20T15:00
 tags: [random]
-keywords: [SQYBI.com, blog, 博客]
+keywords: [SQYBI.com, blog]
 unlisted: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 4
+last_translated_at: 2023-11-22T06:44:25.959Z
 ---
-
-这十年以来，SQYBI.com 的首页一直是下面这段文字：
+For the past decade, the homepage of SQYBI.com has always featured the following text:
 
 > Since my DreamHost hosting is out-of-date, I moved SQYBI.com to Linode VPS. However it will take a period of time to write a new blog application and import old data. Please be patient, SQYBI.com will come back!
 
-当然了，还有后来补上的这段：
+Of course, there's also the bit that was added later:
 
 > Well, it's not back yet. I'm not sure when it will be back although the main part of the blog app is finished.
 
-我其实对网站的重新上线并没有明确的规划。所以当它真的要重新上线的时候，我反而不知道应该写一些什么了。
-毕竟这次重新上线，就好像它当初的下线一样突然。
+To be honest, I never had a clear plan for the website's relaunch. So, when it finally was about to go live again, I found myself at a loss for what to write.
+After all, the relaunch, much like the initial downtime, came unexpectedly.
 
-许久没有产出文字了，第一次重新开始书写，自然是想写得舒适一些。那不如就从我自己显然很熟悉的，十年前网站下线的时候说起吧。
+Having not produced any new content for a long time, naturally, I want my first piece of writing upon returning to be something comfortable. So why not start with something I’m clearly familiar with—the time around the website’s shutdown ten years ago.
 
 <!-- truncate -->
 
-## Web 2.0 和 Weblog
+## Web 2.0 and Weblog
 
-虽然说是从十年前开始聊，但实际上要聊的历史可能还会再长一些。从二三十年前开始，博客这种基于互联网的新信息载体就已经开始萌芽。
+Despite beginning our conversation ten years ago, we have even more history to cover. Thirty years ago, the concept of blogs, a new form of internet-based information, began to emerge.
 
-根据资料（[博客编年史](https://www.yazizzy.top/archives/bo-ke-bian-nian-shi)），最古老的博客形式的网站大概从 1993 年开始出现，而 weblog 这个词也在 1997 年第一次有记录地被使用。那个年代的人们用词远没有今天那么花哨，对于“基于网络的日志”，他们只会简单地叫做 web + log = weblog。相比之下，VLOG 这种奇怪的说法，可以说是令人摸不着头脑——毕竟我第一次听说这个概念的时候，可能只在写代码的时候见过 `VLOG()` 这个函数。
+According to the records ([A Chronology of Blogs](https://www.yazizzy.top/archives/bo-ke-bian-nian-shi)), the earliest blog-like website appeared around 1993, and the word "weblog" was first documented in use in 1997. People weren't as fancy with words back then; a "web-based diary" was simply referred to as a weblog, a fusion of "web" + "log". By contrast, the term "VLOG" seems perplexing—when I first encountered this concept, the only time I'd seen `VLOG()` was in programming code.
 
-不得不说，可能是归功于这些“不够花哨”的网民，那个时候的互联网环境也还不像现在这么严峻。大多数人都是从接触到博客开始，突然发现自己不光能够在互联网上获取信息，也可以作为信息的产出方将自己的知识和见解分享给其他人。
+It must be said, perhaps thanks to these "unfancy" internet users, the online environment then wasn't as intense as it is today. Most people started engaging with the internet by discovering blogs, realizing that they could not only consume information online but also share their knowledge and insights as producers of content.
 
-而淳朴的人民自然会带来淳朴的民风。当时的大环境更像是“各抒己见，求同存异”的状态，无论是有能力自己搭建博客的人，还是单纯在论坛上混迹的人，都有强烈的分享意愿。虽然早期的 Blogger 服务因为种种原因不能在中国使用，但国内的公司们也敏锐地察觉到了这一片广阔的市场。
+And the simple ethos of the populace naturally brought a wholesome community spirit. The prevailing environment was one of expressing ourselves freely and embracing diversity, where both the technically capable blog builders and the forum lurkers had a strong desire to share. Though Blogger was not available in China for various reasons, domestic companies quickly noticed this vast market opportunity.
 
-无论是早期的搜狐博客、新浪博客，还是后来的百度空间、和讯博客，以及可能没有很多人使用的 blogbus 这类独立博客程序和 72pines 这种建站服务——它们无一例外地都像后来雨后春笋般涌出的短博客服务提供商（也就是微博客 / 微博，这个词被新浪微博占用了之后，总觉得用起来怪怪的，所以后面我也都会叫它“短博客”）一样，试图通过各种各样的特色服务抢占这个市场。国外的市场竞争更是激烈，我记得当年微软除了 MSN Spaces 这种传统博客服务以外，甚至还用自己的 Silverlight 技术搞了一个类似于小型社区的东西，感觉这东西加上 VR 和 AI 就是今天的元宇宙。
+From the early Sohu and Sina blogs to later ones like Baidu Space, Hexun blogs, and less frequently used services like blogbus or standalone blogging programs and 72pines for website building—they all, without exception, like the burst of microblogging services that sprang up later (what is now referred to as weiblogs or Weibo, the latter term having been appropriated by Sina Weibo, which sounds weird to me so I'll keep calling it "microblog"), tried to capture the market with diverse specialty services. The competition in the international market was even fiercer; I remember Microsoft having not only traditional blog service MSN Spaces but also another community-like platform using their Silverlight technology, which if it had VR and AI, might just be today's metaverse.
 
-> 这里之所以提到了 72pines 这个没什么人听说过的东西，是因为我真的用过它——而且在我最近整理之前旧版 SQYBI.com 的文章时，偶然发现了自己当时在 72pines 的链接，打开之后发现这个域名已经变成了博彩网站。真是唏嘘啊。
+> The reason I mention 72pines, which is probably unheard of, is that I genuinely used it—at some point when I organizing old articles from the previous version of SQYBI.com, I stumbled upon my old 72pines link and discovered the domain had turned into a gambling website. A true sigh of the times.
 
-在那个所有人都喊着 Web 2.0 但是没有人真的知道 Web 2.0 是什么的时代，这些服务居然也都坚持了很长时间。
+In that era when everyone was chanting Web 2.0 but no one really knew what it was, these services managed to last a surprisingly long time.
 
-## 不是开始，而是结束
+## Not a Beginning, But an End
 
-2005 年前后的我还是中学生，每天乐此不疲地在各个服务间切换，偶尔还发发博文比较一下各个博客服务商提供服务的异同和优劣。直到有一天，也不知道是什么机缘巧合，我见到了 [sofish](https://github.com/sofish) 的个人博客。这是一个使用 Wordpress 搭建的博客，而且他作为一个前端程序员，非常乐于在博客上分享各种建站经验和 Wordpress 魔改主题。
+Around 2005, I was still a high school student, happily shifting between different services and occasionally publishing blog articles to compare different providers' services. One day, by some twist of fate, I came across [sofish](https://github.com/sofish)'s personal blog—an elegant WordPress setup where, as a front-end developer, he enjoyed sharing site-building tips and WordPress theme modifications.
 
-> 可惜的是，[他自己的博客](https://sofi.sh/) 现在也已经处于不维护的状态了，打开之后只能看到一行（甚至还有错字的）“hi their”。
+> Unfortunately, [his blog](https://sofi.sh/) is also no longer maintained, and visiting it now only reveals a line of text with a typo—"hi their".
 
-也是从这时开始，之前只接触过计算机竞赛中命令行程序编写的我，才了解到了什么是前端，什么是后端，什么是 CSS，以及什么是 VPS 和 WordPress。相信我，如果你现在看不懂这些词是什么意思，那时的我也和你现在是一样的。
+It was around this time that I, who had only ever written command-line programs for computer contests, learned about what front-end and back-end development is, about CSS, and about VPS and WordPress. Trust me, if these terms sound foreign to you now, I was just as clueless back then.
 
-而在这之后不久的 2008 年，我就因为计算机竞赛获奖，提前一年被大学录取了。这也意味着我的整个高三没有任何学习任务。一年的高三说长不长说短不短，总得给自己找些事情干。于是，我自然就盯上了自主建站这个新的领域。
+Not long after, in 2008, I got admitted to university a year early thanks to computer contests. This meant I had no academic responsibilities for my entire senior year. A year of senior high isn't particularly long or short, but I had to keep myself busy with something—so naturally, I set my sights on independent web building.
 
-简短截说，经过一些学习，我选择了 Dreamhost 作为 VPS 提供商，同时选择了当时最流行的 WordPress 作为博客程序，也购买了 sqybi.com 这个域名。简单折腾了一段时间，SQYBI.com 正式上线。在这之前我还一直在使用百度空间作为主要的博客站，但是 2008 年开始，我的博客基本就都是在这个 WordPress 网站发表的了。
+In short, after some learning, I chose Dreamhost as my VPS provider, WordPress as my blogging platform, and registered the domain name sqybi.com. After a brief period of tweaking, SQYBI.com officially went live. Before this, I mainly used Baidu Space for blogging, but from 2008 onward, most of my blogs were published on this WordPress site.
 
-> 一个冷知识：和当年大多数复杂的网页程序类似，WordPress 的开发语言是 PHP。如果没记错的话，当时的前端动态语言还是 PHP 和 ASP 分庭抗礼（但是考虑到 Windows 作为服务器的体谅，ASP 也分不到多少），AJAX 刚刚开始流行不久，也没有“PHP 是最好的语言”这个梗。
+> A fun fact: Like most complex web applications of the time, WordPress was developed in PHP. If memory serves, PHP and ASP were the front runners in dynamic languages (ASP not as much, considering the expense on Windows servers), AJAX had just become popular, and "PHP is the best language" wasn't yet a meme.
 
-但也正是这个时候开始，2006 年创立的 Twitter 开始逐渐走红。同时，[饭否](https://fanfou.com/) 的内测也已经开始，这类短博客平台通过限制单条 tweet 发表的字数，达到了一种意料之外的效果：大家逐渐发现产出信息的成本进一步变低了。和博客不同，在这些平台上碍于字数限制没有人能长篇阔论，即使写作能力不够强也可以有自己的产出。当然，从“短博客”或“微博”这些名称就可以看出，至少在国内那个时间段的博客还是很有竞争力的，毕竟后起之秀也都要蹭一下它的名字。
+But it was at this time, around 2006, that Twitter emerged and slowly rose to fame. Fanfou, the microblogging platform, had begun its beta, and these microblogging services achieved an unexpected effect by limiting the number of characters per tweet: People found that producing information became even more effortless. Unlike blogs where no one could write lengthy essays due to character limits—ensuring even less proficient writers could contribute—their rise was imminent. From terms like "microblog" or "Weibo" (sounds strange after Sina Weibo claimed it, hence I refer to it as "microblog"), it's clear that blogs still had competitive strength in China at that time, even as the new platforms leveraged their names.
 
-> 令人惊讶的是，饭否竟然到今天还在运营。这是 [我的饭否个人主页](https://fanfou.com/)，虽然现在已经很久不用了。
+> Surprisingly, Fanfou is still operating to this day. This is [my Fanfou profile](https://fanfou.com/), though I hardly use it now.
 
-而一年后的 2009 年，我进入了大学。大学四年的生活比想象中还要丰富多彩。第一次出远门旅游；每天踢球打球；在校内实验室蹭 paper；接触二次元，用 VOCALOID 制作自己的音乐……虽然也在持续写着博客，但是能够感觉到每次写的东西都很生活化。
+However, by 2009, I entered university, and those four years of college life were richer than imagined. I went on long-distance trips for the first time, played sports daily, hung around in research labs, delved into anime culture, created music with VOCALOID, and despite a consistent blog output, I could sense that my writing became more focused on everyday life.
 
-当然我也在尝试着搞一些有趣的东西。比如基于 PHP 网页的解谜游戏（那个时候我甚至还不知道什么是 CTF），比如“三词故事”（看过《文学少女》的人应该不会陌生），比如一些专业相关的科普文章。
+Of course, I also tried some intriguing things, like puzzle games based on PHP web (I didn’t even know about CTF back then), things like "three-word stories" for those familiar with "Literature Girl", and a few articles popularizing my field of study.
 
-也是因为这段时间的博客经历，我认识了不少好朋友，也获得了给果壳网写文章赚钱的机会。但是随着大学毕业，工作的开始，生活的节奏似乎一下子就被打乱了。说打乱可能不太对，这个状态更像是生活被一个框架给框住了：每天的生活两点一线，要做的事情千篇一律。
+This period of blogging allowed me to make many good friends and even land opportunities to write for paid platforms like Guokr. But as university ended, and work began, the rhythm of life seemed instantly disrupted. To say it was disrupted may not be entirely accurate—it felt more like life was being constrained within a framework: Daily activities fell into a predictable pattern, and tasks became monotonously repetitive.
 
-从 2013 年毕业开始，无论是博客的更新，还是 VOCALOID 的制作，甚至是业余的体育运动，一切都好像进入了停滞状态。虽然工作还不错，薪水作为毕业生来说也不低，甚至是微软这样以 work-life-balance 著称的公司——但我就是觉得自己似乎慢慢地没有了 life。
+From the time I graduated in 2013, whether it was updating my blog, producing VOCALOID music, or even my leisure sports activities, it felt like everything had come to a halt. Although the job was decent, the salary quite high for a fresh graduate, and the workplace being Microsoft, known for its work-life balance, I felt that I was gradually losing the "life" part of that equation.
 
-> 说到 VOCALOID，当时确实认真搞了不少时间，从一个没什么乐理知识的状态开始慢慢摸索，就跟当初摸索着学习建站差不多——这种事情对我总有一种难以抗拒的吸引力。
+> Speaking of VOCALOID, I did invest a lot of time back then, starting from scratch with no music theory background and slowly exploring, much like my initial foray into site building—these things always have an irresistible allure to me.
 >
-> 我还在玩 VOCALOID 那段时间的 [作品](https://space.bilibili.com/105879/channel/collectiondetail?sid=31949)，水平有限但是也算是一段回忆，有兴趣的读者可以听一听。
+> You can listen to my [VOCALOID works](https://space.bilibili.com/105879/channel/collectiondetail?sid=31949) from that period, limited in proficiency, but also a part of my memories, feel free to check it out.
 
-2014 年的时候，先是我的博客因为过多的 spam comments 被 Dreamhost 封禁，又是 Dreamhost 过期忘了续费，维护了好几年的博客程序突然就没有了。
+In 2014, my blog was first suspended by Dreamhost due to an excessive amount of spam comments, followed by my neglect to renew the expired Dreamhost service. Overnight, the blog application I had maintained for years was gone.
 
-综合考量，我决定将服务器暂时转移到当年如日中天的 Linode，同时暂时挂载一个静态 HTML 页面，也就是写着文章开头那两段话的页面——我甚至没有给这个页面写一个 CSS。
+After careful consideration, I decided to temporarily transfer my server to Linode, which was then in its heyday, and hang a static HTML page with the two paragraphs mentioned at the beginning of this article—I didn't even bother to style the page with CSS.
 
-那时的我刚刚接触了 MVC / MVP / MVVM 这些当年很流行的后端架构，简单学习了一下 Django，并想着自己用 Django 写一个博客程序。说实话，其实这个博客程序已经完成了 80%：博客发表系统和评论系统都写完了，用户注册系统也基本可用，这个 repo 现在还在我 Github 的私有 repo 里。但是我突然发现，最大的难题其实是我完全没有前端和 CSS 的知识，也没有任何艺术细胞——最终做出来的网页难看的要死，而且前端部分非常难以维护。
+At that time, I was newly introduced to back-end architectures like MVC/MVP/MVVM, briefly learned Django, and had thoughts of writing my own blog application. Honestly, the blog application was already 80% complete: The blog posting and commenting systems were done, and the user registration system was mostly functional; the repository is still in my private GitHub repo. However, I suddenly realized I had no knowledge of front-end development or CSS nor any artistic sense—the webpage looked terrible, and front-end maintenance was a nightmare.
 
-这个状态就是：继续写下去吧，明摆着搞出来难看得不行，还不如搞个 WordPress；真的搞个 WordPress 吧，又没有什么意思，毕竟都是弄过的东西了，好久不写东西也不太想写博客了。过了一段时间回来再看，Django 框架整个更新了一个大版本，之前的代码想接着用目测得修改一堆东西，所以重新开始维护更是难上加难。
+This was the dilemma: Continuing meant producing something of unsatisfactory quality, unfit compared to WordPress; but opting for WordPress felt unrewarding, already trampled ground, and my blogging motivation had waned. Returning sometime later, I found the Django framework had updated to a major new version, requiring substantial code edits, making restarting its maintenance even more daunting.
 
-只是没有想到，这个尚未开始的项目已经是一个阶段的结束，这一等就是接近十年。
+Little did I know, this unborn project was the conclusion of an era, an intermission that would last nearly ten years.
 
-而这十年，也迎来了博客的时代垂暮。
+And that decade marked the twilight of the blogging era.
 
-## 博客的垂暮之年
+## The Twilight Years of Blogging
 
-2009 年 8 月 14 日发生了一件不大不小的事情：新浪微博开始内测（来源：[维基百科 - 新浪微博](https://zh.wikipedia.org/zh-hans/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A)）。而此后不久，国内短博客的先锋军饭否，则在 2009 年下半年经历了一次为期着实不短的封禁，直到 2010 年底才解封。而 2010 年上半年，饭否创始人王兴就已经开始选择另外创业，创业的项目就是今天已经是国内巨头之一的美团。
+A notable but not quite significant event occurred on August 14, 2009: Sina Weibo began its beta (info source: [Wikipedia - Sina Weibo](https://zh.wikipedia.org/zh-hans/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A)). In the same year, Fanfou, the vanguard of domestic microblogs, faced a substantial suspension in the second half of 2009 and wasn't lifted until late 2010. During the first half of 2010, Fanfou's founder Wang Xing had already decided to venture into a new business, now the giant Meituan.
 
-不管和饭否的封禁是否有关系，事实是 2009 年下半年开始，各家国内大厂都开始推出自己的短博客服务。网易、腾讯、搜狐都有自己的对应业务，而发展最快的则自然是新浪微博。最终，其它几家公司的微博服务纷纷败下阵来，而饭否也没能再起死回生。最终，一家独大的新浪微博甚至将“微博”注册成了自己的商标，也成为了国内事实上的 Twitter 替代品。
+Regardless of its connection to Fanfou's ban, what is certain is that domestic tech giants began their foray into the microblogging business in late 2009. NetEase, Tencent, and Sohu launched their microblog services, with Sina Weibo evolving most rapidly. Eventually, its competitors fell by the wayside, Fanfou never recovered, and even Sina Weibo trademarked “Weibo,” becoming the de facto Chinese Twitter substitute.
 
-而之前的博客领域，被“人人都能参与”“社交属性更强”的短博客冲击得七零八落。编写博客文章需要一定的文字功底，而构建自己的读者圈子又需要长期的干货输出和口碑积累，这远远不如在微博上发布一条几百字的消息就推送给了几百甚至几千个人来得快捷。
+Previously dominant blog domains were battered by "accessible to everyone" and "strong social attributes" microblogs. Writing blog articles required literary skills, and building a reader base demanded consistent output and reputation—a far cry from microblogs that could reach hundreds or thousands with a few hundred words.
 
-在我看来，短博客的兴起原因和今天的自媒体赚钱的本质是一样的，那就是能够更有效地抢占用户时间，并将用户时间转化为收入。
+In my view, the rise of microblogs shares the same essence with today's profitable media—they effectively capture user attention and translate it into revenue.
 
-如果以营利为目的，博客其实是一个投入产出比极低的项目。博主需要大量的时间编写博客文章，甚至需要几倍、几十倍的时间进行知识积累。而博客文章的长度反过来限制了读者群体，阅读一篇文章需要占用读者大量的整块时间，即使有 RSS 等技术的支持，当时的博客也很难支撑用户越来越多的碎片化阅读需求。换言之，博客再火，从始至终也都是一个小众圈子。越来越快的生活节奏下，大家对待博客的态度其实和对待新闻是一样的——看看现在的传统媒体，就不会觉得博客的没落是奇怪的事情了。
+For profit motives, blogs are a project with a terribly low input-to-output ratio. Bloggers spend an immense amount of time writing, often requiring multiple times that for knowledge accumulation. Blog length limits audience size, needing significant reader time investment, despite supports like RSS, and early blogs struggled to accommodate growing fragmented reading habits. In short, despite the buzz, blogs were a niche from start to finish. In the accelerating pace of modern life, people's attitudes towards blogs resemble that of news—consider traditional media's state today, and blogs' decline seems less peculiar.
 
-其实对微博这种短博客服务，以及随之而来的各类自媒体是如何发家的，作为现代网民每个人应该都能说上几句，我也无庸赘述。而早期专注于博客服务的百度空间，则在不久之后的 2012 年也转型为“轻博客”（来源：[维基百科 - 百度空间](https://zh.wikipedia.org/wiki/%E7%99%BE%E5%BA%A6%E7%A9%BA%E9%97%B4)）。而所谓的轻博客，对标的其实也是国外的一款产品。它的名字我猜大家可能都听说过：Tumblr，俗称“汤不热”。
+The nature of the rise of microblogs and subsequent media is well understood by modern netizens, so I'll not dwell on it. But not long afterwards, in 2012, Baidu Space shifted to become a "light blog" (info source: [Wikipedia - Baidu Space](https://zh.wikipedia.org/wiki/%E7%99%BE%E5%BA%A6%E7%A9%BA%E9%97%B4)). "Light blog" was rather a term referenced from a foreign product—Tumblr, also known as "Tumbr."
 
-但是即使是 Tumber，在近些年失去成人内容市场的支撑后，也没有办法坚持运营下去。在 2009 年起内容创作审核日渐严格的中国，百度空间的改版可以说是不得已而为之，但显然也没有办法挽留大量流失的用户。最终，在 2015 年 5 月 7 日，百度空间宣布正式关闭。
+However, even Tumblr struggled to operate without support from adult content markets in recent years. Chinese content creations grew increasingly rigid post-2009, leaving Baidu Space's shift a reluctant necessity, but it still failed to retain its dwindling user base. Finally, on May 7, 2015, Baidu Space officially shut down.
 
-之所以连日期都记得这么清楚，是因为那天正好是我的生日。如果是之前的我，在这种时候一定会发表最后一篇博客文章，长篇累牍地纪念一下一个使用了多年的服务迎来它的终结。
+I remember this date clearly because it happens to be my birthday. If it were the old me, I would've penned a lengthy blog post to commemorate the closure of a long-used service.
 
-我不记得当时有没有简短地写上这么一两句，感慨一下时过境迁。但是我很肯定，我至少是没有写出一篇可以称作是“文章”的东西。可能这个 [百度空间文章评论抓取工具](https://github.com/sqybi/baidu-hi-crawler)，算是当时最后的倔强了。
+I don’t recall whether I wrote a short remark to reflect on the turning of the tides, but I am sure I did not produce what could be called an "article." Perhaps this [Baidu Space Article Comment Extraction Tool](https://github.com/sqybi/baidu-hi-crawler) is the last act of defiance from that time.
 
-而接下来的时间里，博客的消失和短博客的兴起一样迅速。就如同一夜之间，之前博客上的友情链接有一大半都不能访问了，还能访问的也一年都不见一次更新。或许在 2013 年 Google Reader 宣布永久关闭的时候，我们就应该发现：时代变了。
+In the subsequent period, blogs disappeared as quickly as microblogs had risen. As if overnight, most blogroll links became inaccessible, or at least weren't updated once over the course of a year. Perhaps we should have realized the times were changing when Google Reader announced its permanent shutdown in 2013.
 
-## 技术爆炸和过度封装
+## Technological Explosion and Over-Engineering
 
-随着移动互联网时代的到来，网络服务提供商的更新换代速度也越来越快。更多的人逐渐意识到：不能信赖任何所谓的“大公司”，将数据放在别人那里是不靠谱的，一个服务关闭就意味着极高的数据迁移成本，甚至会导致数据丢失。
+The advent of the mobile internet era accelerated the turnover of network service providers. More people began to realize that no so-called "big company" was reliable; storing data with others is precarious, service shutdowns mean high data migration costs, and potential data loss.
 
-而这几年的技术圈，可谓是不停地发生技术爆炸。
+The tech circle of these years has been consistently explosive.
 
-GitHub 带着 Git 一起，占据了开源领域的半壁江山。SVN 逐渐消失，Git 最大的优势就是“分布式”，任何代码都能在自己的每一台电脑上，社区的各个角落里，存在着不知道多少备份。
+GitHub, alongside Git, owns half of the open-source domain. SVN faded, and Git's primary advantage of being "distributed" means code exists in countless backups on one's own devices and across community corners.
 
-而 Chrome 则赢下了和 IE / Firefox / Opera 的战争，通过 V8 引擎不仅统一了浏览器内核的事实标准，也让 JavaScript 不再是一个前端特有的语言，打通了前端和后端的界限。
+Chrome won the browser war against IE/Firefox/Opera with the V8 engine not only standardizing the browser’s engine, but enabling JavaScript to transcend as not merely a front-end language, blurring the lines between front and back ends.
 
-大家突然发现，把数据储存在 GitHub 上，使用 Markdown 做静态渲染，然后直接 serve 一个静态页面——这不是博客的完美形态吗？
+People realized—hosting data on GitHub, rendering static pages in Markdown, serving static pages—wasn't this the ideal form of a blog?
 
-甚至最棘手的评论问题也有办法解决，从一开始各种基于 JavaScript 的动态评论插件，到后来直接用 GitHub 替代数据库（我现在使用的 [giscus](https://giscus.app/) 就是这样的一个工具），终于让大家悬着的心放了下来。毕竟把数据都放在自己手里，最差的情况下也只依赖 GitHub 这样一个接口开放、维护稳定的服务，总比把数据放在一个不知道什么时候要倒闭的服务商那里要好。
+Even the thorniest comment system found solutions, starting with various JavaScript-based dynamic comment plugins to later using GitHub as a database substitute (I now use [giscus](https://giscus.app/) as such a tool). Eventually, everyone could breathe easy—keeping data in hand, depending only on a stable, open-interface service like GitHub, is far better than relying on an unpredictable service provider.
 
-这一段时间的博客程序，也基本都向着这个方向发展。除了在 CMS 领域依旧无人能敌（真的吗？）的 WordPress，个人博客建站开始更多地使用 Hexo / Hugo 这种静态生成工具。
+During this time, blog applications mostly evolved in this direction. Aside from WordPress, which remained unrivaled in the CMS field (really?), personal blog building shifted towards static generator tools like Hexo/Hugo.
 
-但是对于那时的我来说，这些工具甚至比自己搭建一个 WordPress 更加无聊，也显然没有动力去尝试。
+But for me at the time, even these tools were more monotonous than setting up a WordPress, clearly lacking the motivation to explore them.
 
-> 说到 Opera，在我 2017 年刚来到图森的时候，Opera 就在我们楼下的办公室。
+> Speaking of Opera, they were in the office below us when I first arrived in Tucson in 2017.
 >
-> 但是不久之后，它们可能是因为规模越来越小，就搬走去了别的地方。而我们在那个阶段还是扩张期，也顺理成章地租下了他们的办公室。
+> Not long after, perhaps due to downsizing, they moved elsewhere. Our team was still expanding and naturally took over their office.
 >
-> 令我印象非常深刻的是，那一层的卫生间似乎还贴着 Opera 的 logo。
+> What stuck with me was the Opera logo still adorned the bathroom on that floor.
 
-而技术的爆炸还没有结束。随着工作中逐渐接触到各种前端知识，我发现原来这个领域已经出现了 Vue / React 这种框架，以及 Webpack 之类的技术。
+And the technology boom didn't cease. Gradually exposed to more front-end knowledge at work, I discovered frameworks like Vue/React and technologies like Webpack.
 
-这些技术本质上就是提供了大量工具，使得开发者可以把各种组件抽象化并简单复用，同时也将原先 AJAX 的交互接口变成了“注册”的形式。不得不说，它们确实推动了前端技术的发展。通过大量的封装，它们使得前端工程师不再需要关注底层的开发逻辑，而是转而把更多精力用于关注上层的抽象架构是否合理，更 fancy 的效果如何实现等方面。
+Essentially, these provided a wealth of tools for developers to abstract and easily reuse components while transforming traditional AJAX interaction APIs into a "subscription" model. Undeniably, they propelled front-end development. By heavily abstracting, they freed front-end developers from low-level logic, shifting focus to reasonable abstract architectures, implementing fancier features, and more.
 
-我也看到过一些反对的声音，认为现在的软件行业有着太多的过度封装，了解底层原理变得越来越困难。但是至少我个人认为，这些技术是开发更大、更复杂的工具过程中所必须的。或许有一天，这些封装导致软件的实际复杂度已经超出了人类可以掌控的范围——甚至可能这件事现在就在发生。但是即使到了这一天，软件工程的大厦也不会突然崩塌。人们自然会开始学着缩减项目规模，控制项目复杂性，说不定还有新的技术出现，来解决这些问题，就像当初发明了今天这些技术一样。
+I've witnessed dissenting opinions believing the software industry suffers from excessive abstraction, making it increasingly difficult to grasp underlying principles. Personally, I believe these technologies are essential for developing larger, more complex tools. There may come a day when these abstractions render software complexity unmanageable—perhaps even now. Still, even then, the edifice of software engineering won't collapse overnight. People will learn to scale back project sizes, control complexities, and perhaps new technologies will emerge to address these issues, just as they arose to begin with.
 
-毕竟可能每个人、每个社区，甚至整个人类文明的结局，可能都是返璞归真。
+After all, perhaps the fate of every person, community, even human civilization, is to return to simplicity.
 
-## 返璞归真
+## Returning to Simplicity
 
-我现在的这个博客的搭建，使用了基于 React 的 Docusaurus 作为框架，基于函数计算技术的 Cloudflare Pages 部署，使用基于 GitHub Discussions 的 giscus 提供评论功能，甚至在开发和编写部分内容的时候还用了 GitHub Copilot，就连（初版）logo 都是 Midjourney 生成的。
+My current blog setup involves the React-based Docusaurus framework, deployment via function-compute technology on Cloudflare Pages, comments facilitated by GitHub Discussions-based giscus, content and development assistance by GitHub Copilot, and even an initial logo generated by Midjourney.
 
-这些技术确实让整个博客系统的构建变得异常简单。可扪心自问，如果没有这些技术，我就真的不能搭建这样一个博客了吗？
+These technologies indeed simplify the blog system construction. But upon reflection, without these, would I truly be incapable of creating a blog?
 
-之所以现在会重开博客，在技术之外，恐怕更多的是因为又有了一些想写的东西。说得高大上一点就是，回到了初心。
+Perhaps the real reason for rebooting the blog goes beyond technology—it's having something to say again. To put it grandly, it's following the original aspiration.
 
-其实这些年来，我一直在试图探寻究竟什么是生活。但是即使过了这么多年，这个答案可能和当年也没有什么变化：做自己想做的事情，就是生活。
+Over the years, I've pondered the essence of life. Even after so much time, perhaps the answer remains unchanged: Doing what I desire constitutes my life.
 
-但是这个答案也变得和当年完全不同了。当年的我，可能会为这个答案是不是正确而感到迷茫、焦虑、恐惧。面对着大量选择，我无所适从，举棋不定。而现在同样的答案摆在我面前，我只会说：别想那么多，先做就是了。
+Yet, this answer has evolved distinctly from its past interpretation. Previously, I might have questioned the correctness of this reply, felt lost, anxious, afraid. Presented with myriad choices, I was indecisive. Now, confronted with the same answer, I'd say: Don't overthink it, just do it.
 
-可能生活的真谛就是，面对选择勇敢地做出尝试，全身心地投入自己的时间和精力，最后回到那个最开始的自己，并狠狠地肯定他。
+Maybe life's true meaning is about boldly making choices, diving in with time and passion, and then returning to that initial self—fully and fervently affirmed.
 
-就像我这个博客首页写着的那句话：
+Just like the line written on my blog's homepage:
 
 > Change is a part of life and takes part in finding us who we are.
 
-多年前我引用这句话的时候，更常使用的是“making”而非“finding”。我也曾经困惑，这句话的原文是什么，到底哪个才是对的。
+Years ago, the phrase I referred to more often contained "making" instead of "finding". I used to wonder what the original line was and which was accurate.
 
-现在，我非常坚定：至少今天的我，是经历了这么多年以后，最终寻找到的我自己。我也可以自豪地说，我还没有被生活变成它的模样。
+Now, I'm sure: The me today is the one I've found after these many years, and I can proudly say that I haven't been molded by life into something else.
 
-## 后记
+## Afterword
 
-下班之后就开始动笔，终于在睡觉前写完了这篇文章，也算是比较一气呵成。
+I started writing after work and finally finished before going to sleep, managing to get it all out in one go.
 
-甚至敲到最后，键盘的 I/O 这两个键已经开始断触了。毕竟是这么久以来的第一篇博客，写爽了就行，敲坏个键盘也算值得（保修还是要提的，最近路由器和键盘轮流坏，垃圾华硕！）。
+Even towards the end, my keyboard's 'I' and 'O' keys began to fail. Since it's my first blog entry in a long while, a broken keyboard seems worth it (though I'll still claim the warranty—recently, my router and keyboard have successively broken down, damn Asus!).
 
-后面我可能会考虑把之前的文章搬运一些回来，以及给博客更新也写个 Telegram 机器人。虽然以前的博客有些丢人，但是毕竟是过去的岁月，一直放在自己手里哪天弄没了也不太好，互联网的记忆就要还给互联网。
+I might consider migrating some of my previous posts and updating the blog to add a Telegram bot alert for new posts. Although past writings may be somewhat embarrassing, they are a part of the past—best to return them to the Internet before they're lost for good.
 
-在这之前，如果要追更，可以通过顶部的 RSS 订阅一下，虽然现在可能也没人用这东西了。以及如果要评论的话，需要先注册一个 GitHub 账号——在审核中生存不容易，这里就凑合一下吧，毕竟看到这篇文章的人估计也都多多少少知道怎么用梯子。
-
-慢慢来，慢慢来。
+Before then, if you want to keep up with updates, consider subscribing via RSS at the top, though hardly anyone uses it these days. And if you wish to comment, you'll need a GitHub account—it's challenging to survive moderation, so let's make do, considering anyone reading this article probably knows how to use a

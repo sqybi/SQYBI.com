@@ -21,3 +21,4 @@ yarn-error.log*
 
 .wrangler/
 .dev.vars
+.env
