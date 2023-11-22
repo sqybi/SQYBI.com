@@ -1,11 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import moment from 'moment';
-import { fileURLToPath } from 'url';
-import OpenAI from 'openai';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const fs = require('fs');
+const path = require('path');
+const moment = require('moment');
+const { fileURLToPath } = require('url');
+const OpenAI = require('openai');
 
 const sourceLang = 'zh-Hans';
 const targetLangs = ['en-US'];
@@ -104,6 +101,8 @@ const translateAllFiles = async (targetLang) => {
     await searchFiles(blogPath, targetLang);
 };
 
-for (const targetLang of targetLangs) {
-    await translateAllFiles(targetLang);
-}
+(async () => {
+    for (const targetLang of targetLangs) {
+        await translateAllFiles(targetLang);
+    }
+})();
