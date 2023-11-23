@@ -1,6 +1,6 @@
 ---
 slug: adding-i18n-for-a-docusaurus-site
-title: 为 Docusaurus 站点添加 i18n：LLM 的正确打开方式
+title: "Adding i18n for a Docusaurus Site: The Correct Way to Launch LLM"
 authors: [sqybi]
 date: 2023-11-23T17:00
 tags: [technology]
@@ -9,8 +9,7 @@ unlisted: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 4
-
-last_translated_at: 2023-11-23T14:39:45.641Z
+last_translated_at: 2023-11-23T22:56:49.000Z
 ---
 
 > (This article was translated by ChatGPT automatically.)
