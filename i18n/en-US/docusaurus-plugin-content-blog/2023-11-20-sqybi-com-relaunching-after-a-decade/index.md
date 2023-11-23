@@ -9,7 +9,7 @@ unlisted: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 4
-last_translated_at: 2023-11-22T06:44:25.959Z
+last_translated_at: 2023-11-20T23:20:35.000Z
 ---
 
 > (This article was translated by ChatGPT automatically.)

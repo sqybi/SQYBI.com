@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
-const { fileURLToPath } = require('url');
 const OpenAI = require('openai');
 
 const sourceLang = 'zh-Hans';
@@ -40,10 +39,7 @@ const translate = async (content, targetLang) => {
         result += chunkData;
         console.log(`ChatGPT responding, length ${chunkData.length} / ${result.length}...`);
     }
-    const chatCompletion = await stream.finalChatCompletion();
-    const chatCompletionData = chatCompletion.choices[0]?.delta?.content || '';
-    result += chatCompletionData;
-    console.log(`ChatGPT response finished, last length ${chatCompletionData.length} / ${result.length}.`);
+    console.log(`ChatGPT response finished, total length ${result.length}.`);
 
     return result;
 };
@@ -62,7 +58,10 @@ const translateFile = async (filePath, targetLang) => {
     );
 
     const fileContent = fs.readFileSync(filePath, 'utf-8');
-    const lastEditedTime = moment(fs.statSync(filePath).mtime);
+    const { execSync } = require('child_process');
+    const command = `git log -1 --pretty="format:%ct" ${itemPath}`;
+    const result = execSync(command, { encoding: 'utf-8' });
+    const lastEditedTime = moment.unix(result.trim());
     if (!fs.existsSync(translationPath)) {
         fs.writeFileSync(translationPath, fileContent);
     }
@@ -84,7 +83,7 @@ const translateFile = async (filePath, targetLang) => {
             + translatedMainContent;
 
         fs.writeFileSync(translationPath, translatedFullContent);
-        console.log('Done.');
+        console.log('Done!');
     } else {
         console.log('Already translated, skipped.');
     }
@@ -99,6 +98,7 @@ const searchFiles = async (basePath, targetLang) => {
             await searchFiles(itemPath, targetLang);
         } else if (itemStats.isFile() && (item.endsWith('.md') || item.endsWith('.mdx'))) {
             await translateFile(itemPath, targetLang);
+            console.log('----------------------------------------');
         }
     }
 };
