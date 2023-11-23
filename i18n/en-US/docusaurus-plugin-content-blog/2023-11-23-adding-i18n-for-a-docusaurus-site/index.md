@@ -14,7 +14,7 @@ last_translated_at: 2023-11-23T22:56:49.000Z
 
 > (This article was translated by ChatGPT automatically.)
 
-After publishing the [first article](/blog/2023-11-20-sqybi-com-relaunching-after-a-decade/) about website construction, I had intended to take advantage of the three minutes of enthusiasm to quickly update a few more articles.
+After publishing the [first article](/blog/sqybi-com-relaunching-after-a-decade/) about website construction, I had intended to take advantage of the three minutes of enthusiasm to quickly update a few more articles.
 
 Unfortunately, things didn't turn out as desired. On the very night the article was published, one of my cats passed away from a sudden heart attack, returning to the stars. Having just settled that matter, I had to travel to Shanghai on short notice for work. Besides that, there was a string of meetings already scheduled that I needed to attend.
 
