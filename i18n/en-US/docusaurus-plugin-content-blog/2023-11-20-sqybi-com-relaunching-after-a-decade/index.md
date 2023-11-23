@@ -171,4 +171,6 @@ Even towards the end, my keyboard's 'I' and 'O' keys began to fail. Since it's m
 
 I might consider migrating some of my previous posts and updating the blog to add a Telegram bot alert for new posts. Although past writings may be somewhat embarrassing, they are a part of the past—best to return them to the Internet before they're lost for good.
 
-Before then, if you want to keep up with updates, consider subscribing via RSS at the top, though hardly anyone uses it these days. And if you wish to comment, you'll need a GitHub account—it's challenging to survive moderation, so let's make do, considering anyone reading this article probably knows how to use a
+Before then, if you want to keep up with updates, consider subscribing via RSS at the top, though hardly anyone uses it these days. And if you wish to comment, you'll need a GitHub account—it's challenging to survive moderation, so let's make do, considering anyone reading this article probably knows how to use proxies or VPNs.
+
+Take it slow, take it slow.
