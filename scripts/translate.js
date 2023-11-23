@@ -40,6 +40,10 @@ const translate = async (content, targetLang) => {
         result += chunkData;
         console.log(`ChatGPT responding, length ${chunkData.length} / ${result.length}...`);
     }
+    const chatCompletion = await stream.finalChatCompletion();
+    const chatCompletionData = chatCompletion.choices[0]?.delta?.content || '';
+    result += chatCompletionData;
+    console.log(`ChatGPT response finished, last length ${chatCompletionData.length} / ${result.length}.`);
 
     return result;
 };
