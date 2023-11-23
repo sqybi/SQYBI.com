@@ -3,6 +3,11 @@ import BlogPostItem from '@theme-original/BlogPostItem';
 import Giscus from '@giscus/react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
+const localeMap = {
+  'en-US': 'en',
+  'zh-Hans': 'zh-CN',
+};
+
 export default function BlogPostItemWrapper(props) {
   const {
     siteConfig: {customFields},
@@ -23,7 +28,7 @@ export default function BlogPostItemWrapper(props) {
         emitMetadata="0"
         inputPosition="top"
         theme="preferred_color_scheme"
-        lang={currentLocale}
+        lang={localeMap[currentLocale] ?? currentLocale}
         loading="lazy"
         crossorigin="anonymous"
         async
