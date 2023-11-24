@@ -41,7 +41,11 @@ And the simple ethos of the populace naturally brought a wholesome community spi
 
 From the early Sohu and Sina blogs to later ones like Baidu Space, Hexun blogs, and less frequently used services like blogbus or standalone blogging programs and 72pines for website building—they all, without exception, like the burst of microblogging services that sprang up later (what is now referred to as weiblogs or Weibo, the latter term having been appropriated by Sina Weibo, which sounds weird to me so I'll keep calling it "microblog"), tried to capture the market with diverse specialty services. The competition in the international market was even fiercer; I remember Microsoft having not only traditional blog service MSN Spaces but also another community-like platform using their Silverlight technology, which if it had VR and AI, might just be today's metaverse.
 
-> The reason I mention 72pines, which is probably unheard of, is that I genuinely used it—at some point when I organizing old articles from the previous version of SQYBI.com, I stumbled upon my old 72pines link and discovered the domain had turned into a gambling website. A true sigh of the times.
+:::note[Today's 72pines]
+
+The reason I mention 72pines, which is probably unheard of, is that I genuinely used it—at some point when I organizing old articles from the previous version of SQYBI.com, I stumbled upon my old 72pines link and discovered the domain had turned into a gambling website. A true sigh of the times.
+
+:::
 
 In that era when everyone was chanting Web 2.0 but no one really knew what it was, these services managed to last a surprisingly long time.
 
@@ -49,7 +53,11 @@ In that era when everyone was chanting Web 2.0 but no one really knew what it wa
 
 Around 2005, I was still a high school student, happily shifting between different services and occasionally publishing blog articles to compare different providers' services. One day, by some twist of fate, I came across [sofish](https://github.com/sofish)'s personal blog—an elegant WordPress setup where, as a front-end developer, he enjoyed sharing site-building tips and WordPress theme modifications.
 
-> Unfortunately, [his blog](https://sofi.sh/) is also no longer maintained, and visiting it now only reveals a line of text with a typo—"hi their".
+:::note[sofish's blog]
+
+Unfortunately, [his blog](https://sofi.sh/) is also no longer maintained, and visiting it now only reveals a line of text with a typo—"hi their".
+
+:::
 
 It was around this time that I, who had only ever written command-line programs for computer contests, learned about what front-end and back-end development is, about CSS, and about VPS and WordPress. Trust me, if these terms sound foreign to you now, I was just as clueless back then.
 
@@ -57,11 +65,19 @@ Not long after, in 2008, I got admitted to university a year early thanks to com
 
 In short, after some learning, I chose Dreamhost as my VPS provider, WordPress as my blogging platform, and registered the domain name sqybi.com. After a brief period of tweaking, SQYBI.com officially went live. Before this, I mainly used Baidu Space for blogging, but from 2008 onward, most of my blogs were published on this WordPress site.
 
-> A fun fact: Like most complex web applications of the time, WordPress was developed in PHP. If memory serves, PHP and ASP were the front runners in dynamic languages (ASP not as much, considering the expense on Windows servers), AJAX had just become popular, and "PHP is the best language" wasn't yet a meme.
+:::note[PHP wasn't the best language yet?]
+
+A fun fact: Like most complex web applications of the time, WordPress was developed in PHP. If memory serves, PHP and ASP were the front runners in dynamic languages (ASP not as much, considering the expense on Windows servers), AJAX had just become popular, and "PHP is the best language" wasn't yet a meme.
+
+:::
 
 But it was at this time, around 2006, that Twitter emerged and slowly rose to fame. Fanfou, the microblogging platform, had begun its beta, and these microblogging services achieved an unexpected effect by limiting the number of characters per tweet: People found that producing information became even more effortless. Unlike blogs where no one could write lengthy essays due to character limits—ensuring even less proficient writers could contribute—their rise was imminent. From terms like "microblog" or "Weibo" (sounds strange after Sina Weibo claimed it, hence I refer to it as "microblog"), it's clear that blogs still had competitive strength in China at that time, even as the new platforms leveraged their names.
 
-> Surprisingly, Fanfou is still operating to this day. This is [my Fanfou profile](https://fanfou.com/), though I hardly use it now.
+:::note[The forgotten Fanfou]
+
+Surprisingly, Fanfou is still operating to this day. This is [my Fanfou profile](https://fanfou.com/), though I hardly use it now.
+
+:::
 
 However, by 2009, I entered university, and those four years of college life were richer than imagined. I went on long-distance trips for the first time, played sports daily, hung around in research labs, delved into anime culture, created music with VOCALOID, and despite a consistent blog output, I could sense that my writing became more focused on everyday life.
 
@@ -71,9 +87,13 @@ This period of blogging allowed me to make many good friends and even land oppor
 
 From the time I graduated in 2013, whether it was updating my blog, producing VOCALOID music, or even my leisure sports activities, it felt like everything had come to a halt. Although the job was decent, the salary quite high for a fresh graduate, and the workplace being Microsoft, known for its work-life balance, I felt that I was gradually losing the "life" part of that equation.
 
-> Speaking of VOCALOID, I did invest a lot of time back then, starting from scratch with no music theory background and slowly exploring, much like my initial foray into site building—these things always have an irresistible allure to me.
->
-> You can listen to my [VOCALOID works](https://space.bilibili.com/105879/channel/collectiondetail?sid=31949) from that period, limited in proficiency, but also a part of my memories, feel free to check it out.
+:::note[VOCALOID!]
+
+Speaking of VOCALOID, I did invest a lot of time back then, starting from scratch with no music theory background and slowly exploring, much like my initial foray into site building—these things always have an irresistible allure to me.
+
+You can listen to my [VOCALOID works](https://space.bilibili.com/105879/channel/collectiondetail?sid=31949) from that period, limited in proficiency, but also a part of my memories, feel free to check it out.
+
+:::
 
 In 2014, my blog was first suspended by Dreamhost due to an excessive amount of spam comments, followed by my neglect to renew the expired Dreamhost service. Overnight, the blog application I had maintained for years was gone.
 
@@ -127,11 +147,15 @@ During this time, blog applications mostly evolved in this direction. Aside from
 
 But for me at the time, even these tools were more monotonous than setting up a WordPress, clearly lacking the motivation to explore them.
 
-> Speaking of Opera, they were in the office below us when I first arrived in Tucson in 2017.
->
-> Not long after, perhaps due to downsizing, they moved elsewhere. Our team was still expanding and naturally took over their office.
->
-> What stuck with me was the Opera logo still adorned the bathroom on that floor.
+:::note[Encounter with Opera]
+
+Speaking of Opera, they were in the office below us when I first arrived in Tucson in 2017.
+
+Not long after, perhaps due to downsizing, they moved elsewhere. Our team was still expanding and naturally took over their office.
+
+What stuck with me was the Opera logo still adorned the bathroom on that floor.
+
+:::
 
 And the technology boom didn't cease. Gradually exposed to more front-end knowledge at work, I discovered frameworks like Vue/React and technologies like Webpack.
 
