@@ -147,6 +147,7 @@ const config = {
               },
             ],
           },
+          { to: '/links', label: "友情链接", position: 'left' },
           { to: 'pathname:///blog/rss.xml', label: "RSS", position: 'left' },
           {
             type: 'dropdown',

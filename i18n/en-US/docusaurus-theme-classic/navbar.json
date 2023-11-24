@@ -58,5 +58,9 @@
   "item.label.📘 Facebook": {
     "message": "📘 Facebook",
     "description": "Navbar item with label 📘 Facebook"
+  },
+  "item.label.友情链接": {
+    "message": "Links",
+    "description": "Navbar item with label 友情链接"
   }
 }
