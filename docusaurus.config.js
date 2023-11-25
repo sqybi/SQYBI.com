@@ -27,7 +27,7 @@ const config = {
   projectName: 'SQYBI.com', // Usually your repo name.
   deploymentBranch: 'main', // The branch of your site that GitHub pages will deploy from.
 
-  onBrokenLinks: 'warn', // Change to `throw` after all blog tags exist.
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
