@@ -1,6 +1,6 @@
 ---
 slug: photography-story-mother-son-and-wake
-title: 摄影故事：母亲、孩子、尾迹
+title: "Photography Story: Mother, Son and Wake"
 authors: [sqybi]
 date: 2023-11-26T00:30
 tags: [photography]
