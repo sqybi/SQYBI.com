@@ -76,7 +76,9 @@ export default function Links() {
                 <Cards />
                 <div class="container">
                     <div class="row margin-top--lg margin-bottom--lg">
-                        <GiscusComponent />
+                        <div class="col--4 col--offset-4">
+                            <GiscusComponent />
+                        </div>
                     </div>
                 </div>
             </main>
