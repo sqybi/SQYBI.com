@@ -2,15 +2,20 @@ const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
 const OpenAI = require('openai');
+const { Console } = require('console');
+const { exit } = require('process');
 
 const sourceLang = 'zh-Hans';
 const targetLangs = ['en-US'];
+
+let skipAll = false;
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
 const translate = async (content, targetLang) => {
+    console.log(`Translating to ${targetLang} by ChatGPT, it may take a lot of time if the article is long...`);
     const stream = await openai.chat.completions.create({
         messages: [
             {
@@ -19,8 +24,7 @@ const translate = async (content, targetLang) => {
                     `You are a professional interpreter who can translate articles from ${sourceLang} to ${targetLang}.\n`
                     + 'User will provide the original article directly, without any other information.\n'
                     + 'The article is written in plain text, Markdown format or MDX format. '
-                    + 'You should keep the original Markdown syntax or MDX syntax if there are any. '
-                    + 'MDX syntax looks like Markdown + HTML. '
+                    + 'You should keep the original Markdown syntax and all HTML tags unchanged, if there are any. '
                     + 'Also, you should not translate meaningful items, such as URLs.\n'
                     + 'Reply with the translated article. '
                     + 'Do not include the original article in your reply. '
@@ -45,25 +49,21 @@ const translate = async (content, targetLang) => {
 };
 
 const translateFile = async (filePath, targetLang) => {
-    console.log(`Translating ${filePath} to ${targetLang} by ChatGPT, it may take a lot of time if the article is long...`);
+    console.log(`Processing ${filePath}...`);
 
     const frontmatterRegex = /^---\n(.*)---\n(.*)/s;
     const lastTranslatedTimeRegex = /last_translated_at:\s*(.*)\n/s;
 
     const blogPath = path.join(__dirname, '../blog');
-    const translationPath = path.join(
-        __dirname,
-        '../i18n/en-US/docusaurus-plugin-content-blog',
-        path.relative(blogPath, filePath),
-    );
-
     const fileContent = fs.readFileSync(filePath, 'utf-8');
-    const { execSync } = require('child_process');
-    const command = `git log -1 --pretty="format:%ct" ${itemPath}`;
-    const result = execSync(command, { encoding: 'utf-8' });
-    const lastEditedTime = moment.unix(result.trim());
+
+    const translationFolder = path.join(__dirname, '../i18n/en-US/docusaurus-plugin-content-blog', path.relative(blogPath, path.dirname(filePath)));
+    if (!fs.existsSync(translationFolder)) {
+        fs.mkdirSync(translationFolder, { recursive: true });
+    }
+    const translationPath = path.join(translationFolder, path.basename(filePath));
     if (!fs.existsSync(translationPath)) {
-        fs.writeFileSync(translationPath, fileContent);
+        fs.writeFileSync(translationPath, fileContent, { flag: 'w' });
     }
 
     const translationContent = fs.readFileSync(translationPath, 'utf-8');
@@ -72,21 +72,40 @@ const translateFile = async (filePath, targetLang) => {
     const lastTranslatedTimeMatch = translationFrontmatter.match(lastTranslatedTimeRegex);
     const lastTranslatedTime = lastTranslatedTimeMatch ? moment(lastTranslatedTimeMatch[1]) : null;
 
-    if (lastTranslatedTime === null || lastEditedTime > lastTranslatedTime) {
-        const frontmatterMatch = fileContent.match(frontmatterRegex);
-        const frontmatter = frontmatterMatch ? frontmatterMatch[1] : '';
-        const mainContent = frontmatterMatch ? frontmatterMatch[2] : fileContent;
-        const translatedMainContent = await translate(mainContent, targetLang);
-        const translatedFullContent =
-            `---\n${frontmatter}\nlast_translated_at: ${lastEditedTime.toISOString()}\n---\n\n`
-            + '> (This article was translated by ChatGPT automatically.)\n\n'
-            + translatedMainContent;
-
-        fs.writeFileSync(translationPath, translatedFullContent);
-        console.log('Done!');
-    } else {
-        console.log('Already translated, skipped.');
+    if (lastTranslatedTime !== null) {
+        if (!skipAll) {
+            // Ask user on console if they want to translate again
+            console.log(`This article was translated at ${lastTranslatedTime.format('YYYY-MM-DD HH:mm:ss')}.`);
+            console.log('Do you want to translate again? (y/n/a)');
+            const answer = await new Promise((resolve) => {
+                process.stdin.once('data', (data) => {
+                    resolve(data.toString().trim());
+                });
+            });
+            if (answer !== 'y' && answer !== 'Y') {
+                if (answer === 'a' || answer === 'A') {
+                    console.log('(Will skip all translated articles.)');
+                    skipAll = true;
+                }
+                console.log('Skipped.');
+                return;
+            }
+        } else {
+            console.log(`This article was translated at ${lastTranslatedTime.format('YYYY-MM-DD HH:mm:ss')}, skipped.`);
+            return;
+        }
     }
+    const frontmatterMatch = fileContent.match(frontmatterRegex);
+    const frontmatter = frontmatterMatch ? frontmatterMatch[1] : '';
+    const mainContent = frontmatterMatch ? frontmatterMatch[2] : fileContent;
+    const translatedMainContent = await translate(mainContent, targetLang);
+    const translatedFullContent =
+        `---\n${frontmatter}last_translated_at: ${moment().toISOString()}\n---\n\n`
+        + '> (This article was translated by ChatGPT automatically.)\n\n'
+        + translatedMainContent;
+
+    fs.writeFileSync(translationPath, translatedFullContent);
+    console.log('Done!');
 };
 
 const searchFiles = async (basePath, targetLang) => {
@@ -112,4 +131,5 @@ const translateAllFiles = async (targetLang) => {
     for (const targetLang of targetLangs) {
         await translateAllFiles(targetLang);
     }
+    exit(0);
 })();
