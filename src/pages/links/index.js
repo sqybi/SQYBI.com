@@ -1,6 +1,7 @@
 import Translate from '@docusaurus/Translate';
 import Layout from '@theme/Layout';
 import LinksHeader from '@site/src/components/LinksHeader';
+import GiscusComponent from '../../components/GiscuzComponnet';
 
 const links = [
     [
@@ -57,8 +58,8 @@ function Cards() {
             {links.map((groupedLinks, index) => (
                 <div class="row margin-top--lg margin-bottom--lg">
                     {groupedLinks.map((props, index) => (
-                        <div class="col col--3">
-                            <Card class="margin-top--lg margin-bottom--lg" key={index} {...props} />
+                        <div class="col col--3 margin-top--lg margin-bottom--lg">
+                            <Card key={index} {...props} />
                         </div>
                     ))}
                 </div>
@@ -69,11 +70,15 @@ function Cards() {
 
 export default function Links() {
     return (
-        <Layout
-            description="sqybi's personal website">
+        <Layout>
             <LinksHeader />
             <main>
                 <Cards />
+                <div class="container">
+                    <div class="row margin-top--lg margin-bottom--lg">
+                        <GiscusComponent />
+                    </div>
+                </div>
             </main>
         </Layout>
     );
