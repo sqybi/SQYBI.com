@@ -101,6 +101,10 @@ const config = {
     ],
   ],
 
+  themes: [
+    '@docusaurus/theme-mermaid'
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -193,6 +197,13 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+      },
+      mermaid: {
+        theme: {
+          light: 'neutral',
+          dark: 'forest',
+        },
+        options: {},
       },
     }),
 
