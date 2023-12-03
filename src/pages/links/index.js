@@ -21,6 +21,14 @@ const links = [
             image: '/img/links/jtjl.jpg',
             link: 'https://jtjl.github.io/',
         },
+        {
+            owner: 'hbsnmyj',
+            title: 'Hoppinglife',
+            description: 'code in life, hop in life',
+            comment: <Translate>从中学到大学的同学，SJTU 辩论队里那些能说会道的人之一 :P</Translate>,
+            image: '/img/links/hbsnmyj.jpg',
+            link: 'https://blog.hoppinglife.com/',
+        },
     ],
 ];
 
