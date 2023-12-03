@@ -11,7 +11,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 4
 ---
 
-TL;DR: 在一个有旁路由的网络环境中使用 Linksys VELOP 路由器作为主路由，可能会导致旁路由搭建困难或损失网络性能，请优先考虑其它路由器。
+TL;DR: 在一个有旁路由的网络环境中使用 Linksys VELOP 路由器作为主路由，可能会导致旁路由搭建困难或损失网络性能，请优先考虑其它路由器。更新：网件 Netgear 的也不行，安心用小米吧。
 
 :::danger[听我一言]
 

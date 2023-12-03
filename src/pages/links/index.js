@@ -26,7 +26,7 @@ const links = [
             title: 'Hoppinglife',
             description: 'code in life, hop in life',
             comment: <Translate>从中学到大学的同学，SJTU 辩论队里那些能说会道的人之一 :P</Translate>,
-            image: '/img/links/hbsnmyj.jpg',
+            image: '/img/links/hbsnmyj.png',
             link: 'https://blog.hoppinglife.com/',
         },
     ],
