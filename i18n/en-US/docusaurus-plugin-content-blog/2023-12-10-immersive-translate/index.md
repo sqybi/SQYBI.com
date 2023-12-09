@@ -1,6 +1,6 @@
 ---
 slug: immersive-translate
-title: 沉浸式翻译：优秀的浏览器翻译插件
+title: "Immersive Translation: Outstanding Browser Translation Extension"
 authors: [sqybi]
 date: 2023-12-10T00:30
 tags: [technology]
