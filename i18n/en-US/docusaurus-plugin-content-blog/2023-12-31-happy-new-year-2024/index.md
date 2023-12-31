@@ -4,7 +4,7 @@ title: 2024 新年快乐！
 authors: [sqybi]
 date: 2023-12-31T23:59
 tags: [random]
-keywords: ["new year", life, 新年]
+keywords: ["new year", life]
 unlisted: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
