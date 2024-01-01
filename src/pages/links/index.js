@@ -29,6 +29,14 @@ const links = [
             image: '/img/links/hbsnmyj.png',
             link: 'https://blog.hoppinglife.com/',
         },
+        {
+            owner: 'abc881858',
+            title: 'Qt编程思想',
+            description: 'https://thinkinginQt.com',
+            comment: <Translate>认识许久的网友，持续专注于 Qt 相关领域</Translate>,
+            image: '/img/links/abc881858.png',
+            link: 'https://thinkinginqt.com/',
+        },
     ],
 ];
 
