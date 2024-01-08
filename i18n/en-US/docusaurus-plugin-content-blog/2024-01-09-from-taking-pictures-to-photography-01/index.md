@@ -1,6 +1,6 @@
 ---
 slug: from-taking-pictures-to-photography-01
-title: 从拍照到摄影（01）：相机的基础参数
+title: "From Taking Pictures to Photography (01): Basic Parameters of the Camera"
 authors: [sqybi]
 date: 2024-01-09T01:00
 tags: [photography]
