@@ -3,13 +3,15 @@ slug: from-taking-pictures-to-photography-01
 title: 从拍照到摄影（01）：相机的基础参数
 authors: [sqybi]
 date: 2024-01-09T01:00
-tags: [photography]
+tags: [photography, from-taking-pictures-to-photography]
 keywords: [photography, 摄影]
 unlisted: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 4
 ---
+
+> 如果需要查看系列中的其它文章，请使用 tag 跳转到文章目录界面：[#from-taking-pictures-to-photography](/blog/tags/from-taking-pictures-to-photography/)。
 
 ## 从拍照开始到拍照结束
 
@@ -134,8 +136,7 @@ toc_max_heading_level: 4
 
 在接下来的一篇文章中，你即将学到：
 
-- 几个新的参数：镜头焦距、环境光强度、曝光补偿
-- 焦距对拍摄的影响：进光量、景深、畸变、手持稳定性
-- 感光度的进阶知识：原生感光度和双原生感光度
-- 相机光影中最重要的公式：影调公式和互易律
-- 初步了解影调（如果下一篇文章太长的话就放到再下一篇）
+- 相机的焦距是什么
+- 环境光亮度的测量和作用
+- 曝光补偿的含义和作用
+- 不同画幅对镜头焦距参数的影响
