@@ -3,7 +3,7 @@ slug: from-taking-pictures-to-photography-01
 title: "From Taking Pictures to Photography (01): Basic Parameters of the Camera"
 authors: [sqybi]
 date: 2024-01-09T01:00
-tags: [photography]
+tags: [photography, from-taking-pictures-to-photography]
 keywords: [photography, 摄影]
 unlisted: false
 hide_table_of_contents: false
@@ -13,6 +13,8 @@ last_translated_at: 2024-01-08T17:14:34.829Z
 ---
 
 > (This article was translated by ChatGPT automatically.)
+
+> To view other articles in the series, please use the tag to jump to the article directory page: [#from-taking-pictures-to-photography](/blog/tags/from-taking-pictures-to-photography/).
 
 ## From the Start to the End of Photography
 
@@ -131,8 +133,7 @@ In this article, you have learned:
 
 In the following article, you will learn:
 
-- A few new parameters: lens focal length, ambient light intensity, exposure compensation
-- The impact of focal length on photography: light intake, depth of field, distortion, handheld stability
-- Advanced knowledge on sensitivity: native sensitivity and dual native sensitivity
-- The most crucial formula in camera light and shadow: tone formula and reciprocity law
-- A preliminary understanding of tone (if the next article turns out too long, it will be covered in the one after)
+- What is the focal length of a camera
+- The measurement and role of ambient light brightness
+- The meaning and function of exposure compensation
+- The impact of different sensor sizes on lens focal length parameters
