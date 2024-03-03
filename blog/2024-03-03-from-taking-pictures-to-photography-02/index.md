@@ -1,9 +1,9 @@
 ---
 slug: from-taking-pictures-to-photography-02
 title: 从拍照到摄影（02）：相机的其它基础参数和进阶影响
-authors: [sqybi, from-taking-pictures-to-photography]
+authors: [sqybi]
 date: 2024-03-03T20:00
-tags: [photography]
+tags: [photography, from-taking-pictures-to-photography]
 keywords: [photography, 摄影]
 unlisted: false
 hide_table_of_contents: false
