@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 last_translated_at: 2023-12-09T16:30:53.755Z
 ---
 
-> (This article was translated by ChatGPT automatically.)
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
 
 Recently, I haven't been feeling great, so I've decided to write about some simpler topics.
 

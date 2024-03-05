@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 last_translated_at: 2023-11-25T16:28:19.503Z
 ---
 
-> (This article was translated by ChatGPT automatically.)
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
 
 <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/sqybi/53277433710/in/dateposted/" title="海滩上的小朋友"><img src="https://live.staticflickr.com/65535/53277433710_bbb579288a_k.jpg" width="2048" height="1365" alt="海滩上的小朋友"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 

@@ -101,7 +101,7 @@ const translateFile = async (filePath, targetLang) => {
     const translatedMainContent = await translate(mainContent, targetLang);
     const translatedFullContent =
         `---\n${frontmatter}last_translated_at: ${moment().toISOString()}\n---\n\n`
-        + '> (This article was translated by ChatGPT automatically.)\n\n'
+        + ':::info[Translation Tool]\n\nThis article was translated by ChatGPT automatically, with minor manual corrections.\n\n:::\n\n'
         + translatedMainContent;
 
     fs.writeFileSync(translationPath, translatedFullContent);

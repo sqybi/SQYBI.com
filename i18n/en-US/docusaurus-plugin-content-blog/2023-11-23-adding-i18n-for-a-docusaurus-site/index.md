@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 last_translated_at: 2023-11-23T22:56:49.000Z
 ---
 
-> (This article was translated by ChatGPT automatically.)
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
 
 After publishing the [first article](/blog/sqybi-com-relaunching-after-a-decade/) about website construction, I had intended to take advantage of the three minutes of enthusiasm to quickly update a few more articles.
 

@@ -1,6 +1,6 @@
 ---
 slug: happy-new-year-2024
-title: 2024 新年快乐！
+title: Happy New Year 2024!
 authors: [sqybi]
 date: 2023-12-31T23:59
 tags: [random]
@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 last_translated_at: 2023-12-31T16:52:45.617Z
 ---
 
-> (This article was translated by ChatGPT automatically.)
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
 
 Happy New Year, everyone, despite not having updated in quite a while, half a month flew by!
 

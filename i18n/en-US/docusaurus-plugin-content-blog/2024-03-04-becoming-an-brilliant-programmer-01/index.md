@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 last_translated_at: 2024-03-04T16:24:10.829Z
 ---
 
-> (This article was translated by ChatGPT automatically.)
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
 
 > To view other articles in the series, please use the tag to jump to the article directory page: [#becoming-an-brilliant-programmer](/blog/tags/becoming-an-brilliant-programmer/).
 
