@@ -15,6 +15,8 @@ toc_max_heading_level: 4
 
 Openwrt 上 HomeProxy 的 sing-box 不支持 Hysteria2 port hopping？不如自己来 hop 吧！
 
+<!--truncate-->
+
 ## 背景
 
 Hysteria2 是一种基于 UDP 的代理方案。
