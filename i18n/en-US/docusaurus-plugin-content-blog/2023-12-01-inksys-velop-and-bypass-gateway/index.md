@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 last_translated_at: 2023-12-01T15:50:38.259Z
 ---
 
-> (This article was translated by ChatGPT automatically.)
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
 
 TL;DR: When using Linksys VELOP routers as the main router in a network environment with a secondary router, it may lead to difficulties in setting up the secondary router or loss of network performance. It's recommended to consider other routers first. Update: Netgear routers won't work either; just stick with Xiaomi.
 

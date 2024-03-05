@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 last_translated_at: 2024-01-08T17:14:34.829Z
 ---
 
-> (This article was translated by ChatGPT automatically.)
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
 
 > To view other articles in the series, please use the tag to jump to the article directory page: [#from-taking-pictures-to-photography](/blog/tags/from-taking-pictures-to-photography/).
 

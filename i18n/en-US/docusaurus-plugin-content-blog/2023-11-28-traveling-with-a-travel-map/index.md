@@ -12,8 +12,12 @@ toc_max_heading_level: 4
 last_translated_at: 2023-11-28T12:37:44.174Z
 ---
 
-> (This article was translated by ChatGPT automatically.)
->
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
+
 > This article used a word in Chinese: 路书 (LuShu). It has different meaning under different situation. ChatGPT translated it to "itinerary", but I think it's not accurate. However, it is only a codename, and I will explain it in the article.
 
 Before every trip, we inevitably engage in some travel planning.

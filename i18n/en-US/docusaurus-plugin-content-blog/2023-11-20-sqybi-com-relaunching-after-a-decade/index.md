@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 last_translated_at: 2023-11-20T23:20:35.000Z
 ---
 
-> (This article was translated by ChatGPT automatically.)
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
 
 For the past decade, the homepage of SQYBI.com has always featured the following text:
 
