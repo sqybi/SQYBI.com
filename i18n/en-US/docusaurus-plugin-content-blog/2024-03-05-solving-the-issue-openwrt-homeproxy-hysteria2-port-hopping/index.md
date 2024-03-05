@@ -22,6 +22,8 @@ Just jotting down some brief solutions to problems:
 
 Unable to use Hysteria2 port hopping with HomeProxy's sing-box on Openwrt? Why not hop it yourself!
 
+<!--truncate-->
+
 ## Background
 
 Hysteria2 is a UDP-based proxy solution.
