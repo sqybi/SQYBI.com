@@ -3,7 +3,7 @@ slug: traveling-with-a-travel-map
 title: Traveling with a Travel Map
 authors: [sqybi]
 date: 2023-11-28T20:30
-tags: [random]
+tags: [random, software-recommendation]
 keywords: [travel, map]
 unlisted: false
 hide_table_of_contents: false

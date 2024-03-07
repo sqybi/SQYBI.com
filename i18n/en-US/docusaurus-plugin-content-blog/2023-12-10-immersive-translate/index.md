@@ -3,7 +3,7 @@ slug: immersive-translate
 title: "Immersive Translation: Outstanding Browser Translation Extension"
 authors: [sqybi]
 date: 2023-12-10T00:30
-tags: [technology]
+tags: [technology, software-recommendation]
 keywords: [translation, 翻译, chrome, plugin, 插件, browser, 浏览器]
 unlisted: false
 hide_table_of_contents: false
