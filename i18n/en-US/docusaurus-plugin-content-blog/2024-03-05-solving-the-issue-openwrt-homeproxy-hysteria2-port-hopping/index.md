@@ -78,36 +78,45 @@ The way to change the port is to modify the configuration of the OpenWrt front-e
 
 PORT_STARTING=20000
 PORT_RANGE=10000
+MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING=5
+NETWORK_TEST_URL=http://www.google.com/generate_204
+LOG_FILE=/var/log/hopping.log
+NODE_NAME=my_hysteria_node
 
 failure_count=0
 
-for i in {1..5}; do
-    curl google.com &> /dev/null
+for i in {1..${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING}}; do
+    curl ${NETWORK_TEST_URL} &> /dev/null
 
     if [ $? -eq 0 ]; then
         echo "Network check successful."
         break
     else
-        ((failure_count++))
+        let failure_count=${failure_count}+1
         echo "Network check failed. Total failures: ${failure_count}"
     fi
 
     sleep 1
 done
 
-if [ "$failure_count" -eq 5 ]; then
+if [ "${failure_count}" -eq ${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING} ]; then
     new_port=$((RANDOM % ${PORT_RANGE} + ${PORT_STARTING}))
-    echo "Five consecutive ping failures. Try hopping to port ${new_port}."
+    echo `date "+%Y-%m-%d %H:%M:%S"` >>${LOG_FILE}
+    echo "${failure_count} consecutive ping failures. Try hopping to port ${new_port}." >>${LOG_FILE}
 
     uci set homeproxy.config.main_node=nil
     uci commit homeproxy
     /etc/init.d/homeproxy restart
-    uci set homeproxy.my_hysteria_node.port=${new_port}
-    uci set homeproxy.config.main_node=my_hysteria_node
+    sleep 1
+    uci set homeproxy.${NODE_NAME}.port=${new_port}
+    uci set homeproxy.config.main_node=${NODE_NAME}
     uci commit homeproxy
     /etc/init.d/homeproxy restart
-   
-    exit 1
+
+    echo "Switched to port ${new_port}" >>${LOG_FILE}
+    echo "" >>${LOG_FILE}
+else
+    echo "Network is OK. Total failures: ${failure_count}"
 fi
 ```
 
