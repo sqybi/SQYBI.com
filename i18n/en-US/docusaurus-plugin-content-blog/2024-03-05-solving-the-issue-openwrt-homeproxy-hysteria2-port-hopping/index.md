@@ -73,20 +73,29 @@ If any one of the five attempts is successful, it means the port is still availa
 
 The way to change the port is to modify the configuration of the OpenWrt front-end Luci directly with `uci`, and to restart the `homeproxy` service in a timely manner after the modification.
 
+:::warning[Latest update: March 13, 2024]
+
+The script has been updated because its previous version would cause issues due to unsupported syntax when executed in OpenWrt's sh environment.
+
+The new script has been tested and confirmed to execute successfully.
+
+:::
+
 ```shell
 #!/usr/bin/env sh
 
 PORT_STARTING=20000
 PORT_RANGE=10000
 MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING=5
+CURL_TIMEOUT_IN_SECONDS=3
 NETWORK_TEST_URL=http://www.google.com/generate_204
 LOG_FILE=/var/log/hopping.log
 NODE_NAME=my_hysteria_node
 
 failure_count=0
 
-for i in {1..${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING}}; do
-    curl ${NETWORK_TEST_URL} &> /dev/null
+for i in $(seq 1 ${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING}); do
+    curl -m ${CURL_TIMEOUT_IN_SECONDS} ${NETWORK_TEST_URL} &> /dev/null
 
     if [ $? -eq 0 ]; then
         echo "Network check successful."
@@ -99,7 +108,7 @@ for i in {1..${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING}}; do
     sleep 1
 done
 
-if [ "${failure_count}" -eq ${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING} ]; then
+if [ "${failure_count}" -ge ${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING} ]; then
     new_port=$((RANDOM % ${PORT_RANGE} + ${PORT_STARTING}))
     echo `date "+%Y-%m-%d %H:%M:%S"` >>${LOG_FILE}
     echo "${failure_count} consecutive ping failures. Try hopping to port ${new_port}." >>${LOG_FILE}
