@@ -66,20 +66,29 @@ apt install iptables-persistent
 
 更换端口的方式则是通过 `uci` 直接修改 OpenWrt 前端 Luci 的配置，同时在修改后适时地重启 `homeproxy` 服务。
 
+:::warning[更新提醒：2024-03-13]
+
+因为之前的脚本在 OpenWrt 的 sh 中执行，会导致部分语法不支持，所以我更新了脚本内容。
+
+新的脚本通过测试已经确认可以成功执行。
+
+:::
+
 ```shell
 #!/usr/bin/env sh
 
 PORT_STARTING=20000
 PORT_RANGE=10000
 MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING=5
+CURL_TIMEOUT_IN_SECONDS=3
 NETWORK_TEST_URL=http://www.google.com/generate_204
 LOG_FILE=/var/log/hopping.log
 NODE_NAME=my_hysteria_node
 
 failure_count=0
 
-for i in {1..${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING}}; do
-    curl ${NETWORK_TEST_URL} &> /dev/null
+for i in $(seq 1 ${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING}); do
+    curl -m ${CURL_TIMEOUT_IN_SECONDS} ${NETWORK_TEST_URL} &> /dev/null
 
     if [ $? -eq 0 ]; then
         echo "Network check successful."
@@ -92,7 +101,7 @@ for i in {1..${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING}}; do
     sleep 1
 done
 
-if [ "${failure_count}" -eq ${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING} ]; then
+if [ "${failure_count}" -ge ${MAX_FAILURE_ATTEMPTS_BEFORE_HOPPING} ]; then
     new_port=$((RANDOM % ${PORT_RANGE} + ${PORT_STARTING}))
     echo `date "+%Y-%m-%d %H:%M:%S"` >>${LOG_FILE}
     echo "${failure_count} consecutive ping failures. Try hopping to port ${new_port}." >>${LOG_FILE}
