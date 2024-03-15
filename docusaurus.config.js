@@ -238,6 +238,16 @@ const config = {
     giscusRepoId: process.env.GISCUS_REPO_ID,
     giscusCategoryId: process.env.GISCUS_CATEGORY_ID,
   },
+
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'baidu-site-verification',
+        content: 'codeva-S7U776qVYB',
+      },
+    }
+  ],
 };
 
 export default config;
