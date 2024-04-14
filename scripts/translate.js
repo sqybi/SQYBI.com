@@ -33,7 +33,7 @@ const translate = async (content, targetLang) => {
             },
             { role: 'user', content: content }
         ],
-        model: 'gpt-4-1106-preview',
+        model: 'gpt-4-turbo',
         stream: true,
     });
 
