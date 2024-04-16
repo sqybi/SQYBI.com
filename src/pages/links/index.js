@@ -38,6 +38,8 @@ const links = [
             image: '/img/links/abc881858.png',
             link: 'https://thinkinginqt.com/',
         },
+    ],
+    [
         {
             owner: 'whyes',
             title: 'whyes 的博客',
@@ -56,6 +58,8 @@ const links = [
         },
     ],
 ];
+
+
 
 function Card({ owner, title, description, comment, image, link }) {
     return (
@@ -77,7 +81,7 @@ function Card({ owner, title, description, comment, image, link }) {
                         <em>{comment}</em>
                     </div>
                     <div class="margin-top--lg">
-                        <a href={link}><button class="button button--primary button--block">Visit</button></a>
+                        <a href={link} target="_blank" rel="noopener noreferrer"><button class="button button--primary button--block"><Translate>访问</Translate></button></a>
                     </div>
                 </div>
             </div>
@@ -88,15 +92,22 @@ function Card({ owner, title, description, comment, image, link }) {
 function Cards() {
     return (
         <div class="container">
-            {links.map((groupedLinks, index) => (
-                <div class="row margin-top--lg margin-bottom--lg">
-                    {groupedLinks.map((props, index) => (
-                        <div class="col col--3 margin-top--lg margin-bottom--lg">
-                            <Card key={index} {...props} />
-                        </div>
-                    ))}
-                </div>
-            ))}
+            <div class="divider first-divider"><span class="divider-text"><Translate>熟识好友</Translate></span></div>
+            <div class="row margin-top--lg margin-bottom--lg">
+                {links[0].map((props, index) => (
+                    <div class="col col--3 margin-top--lg margin-bottom--lg">
+                        <Card key={index} {...props} />
+                    </div>
+                ))}
+            </div>
+            <div class="divider"><span class="divider-text"><Translate>个人推荐</Translate></span></div>
+            <div class="row margin-top--lg margin-bottom--lg">
+                {links[1].map((props, index) => (
+                    <div class="col col--3 margin-top--lg margin-bottom--lg">
+                        <Card key={index} {...props} />
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
