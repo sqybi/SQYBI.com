@@ -443,5 +443,15 @@
   },
   "认识许久的网友，持续专注于 Qt 相关领域": {
     "message": "A longtime online friend who continues to focus on the field of Qt"
+  },
+  "偶然搜索到的博客，热爱软件技术的医生维护的跨领域知识库": {
+    "message": "A blog discovered by chance, maintained by a doctor who loves software technology, serving as a cross-disciplinary knowledge base."
+  },
+  "同样在 2023 年重启了自己博客的网友，相识于少数派": {
+    "message": "A netizen who also restarted their blog in 2023, met through the community of SSPAI."
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count} items",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
   }
 }
