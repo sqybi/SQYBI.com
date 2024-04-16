@@ -453,5 +453,14 @@
   "theme.docs.DocCard.categoryDescription.plurals": {
     "message": "{count} items",
     "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "访问": {
+    "message": "Visit"
+  },
+  "熟识好友": {
+    "message": "Familiar Friends"
+  },
+  "个人推荐": {
+    "message": "Personal Recommendations"
   }
 }

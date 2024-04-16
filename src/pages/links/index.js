@@ -81,7 +81,7 @@ function Card({ owner, title, description, comment, image, link }) {
                         <em>{comment}</em>
                     </div>
                     <div class="margin-top--lg">
-                        <a href={link}><button class="button button--primary button--block">Visit</button></a>
+                        <a href={link} target="_blank" rel="noopener noreferrer"><button class="button button--primary button--block"><Translate>访问</Translate></button></a>
                     </div>
                 </div>
             </div>
