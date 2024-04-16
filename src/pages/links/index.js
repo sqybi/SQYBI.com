@@ -2,6 +2,7 @@ import Translate from '@docusaurus/Translate';
 import Layout from '@theme/Layout';
 import LinksHeader from '@site/src/components/LinksHeader';
 import GiscusComponent from '../../components/GiscuzComponnet';
+import './index.css';
 
 const links = [
     [
@@ -37,6 +38,22 @@ const links = [
             image: '/img/links/abc881858.png',
             link: 'https://thinkinginqt.com/',
         },
+        {
+            owner: 'whyes',
+            title: 'whyes 的博客',
+            description: 'Pocket, Read & Liver cancer',
+            comment: <Translate>偶然搜索到的博客，热爱软件技术的医生维护的跨领域知识库</Translate>,
+            image: '/img/links/whyes.png',
+            link: 'https://whyes.org/',
+        },
+        {
+            owner: '千里之豪',
+            title: '千里之豪 格物垛',
+            description: 'Fun to life, fun to coding',
+            comment: <Translate>同样在 2023 年重启了自己博客的网友，相识于少数派</Translate>,
+            image: '/img/links/qianlizhihao.jpg',
+            link: 'https://blog.gadore.top/',
+        },
     ],
 ];
 
@@ -46,22 +63,22 @@ function Card({ owner, title, description, comment, image, link }) {
             <div class="card shadow--md">
                 {image
                     ? (<div class="card__image">
-                        <img src={image} alt={`Image for site ${title}`} style={{ width: '100%', height: 'auto' }} />
+                        <img src={image} alt={`Image for site ${title}`} />
                     </div>)
                     : ''}
                 <div class="card__body">
                     <div>
                         <strong>{title}</strong> | <span class="badge badge--info">{owner}</span>
                     </div>
-                    <div class="margin-top--sm">
+                    <div class="margin-top--md">
                         <span class="badge badge--secondary">{description}</span>
                     </div>
                     <div class="margin-top--md">
                         <em>{comment}</em>
                     </div>
-                </div>
-                <div class="card__footer">
-                    <a href={link}><button class="button button--primary button--block">Visit</button></a>
+                    <div class="margin-top--lg">
+                        <a href={link}><button class="button button--primary button--block">Visit</button></a>
+                    </div>
                 </div>
             </div>
         </div>
