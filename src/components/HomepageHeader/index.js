@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
-import Translate from '@docusaurus/Translate';
 
 export default function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
