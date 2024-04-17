@@ -58,7 +58,8 @@ const FeatureList = [
           <a href="mailto:sqybi@126.com"><Translate>✉️ Email: sqybi@126.com</Translate></a><br />
         </p>
         <p>
-          <Translate>希望了解更多关于我的信息，可以查阅以下页面：</Translate><a href="/about/"><Translate>关于我</Translate></a>
+          <Translate>希望了解更多关于我的信息，可以查阅以下页面：</Translate><br/>
+          <a href="/about/"><Translate>十几个为什么</Translate></a>
         </p>
       </>
     ),

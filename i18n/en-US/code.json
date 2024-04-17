@@ -462,5 +462,11 @@
   },
   "个人推荐": {
     "message": "Personal Recommendations"
+  },
+  "希望了解更多关于我的信息，可以查阅以下页面：": {
+    "message": "To learn more about me, you can visit the following page:"
+  },
+  "十几个为什么": {
+    "message": "A Dozen Whys"
   }
 }

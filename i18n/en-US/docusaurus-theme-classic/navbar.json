@@ -62,5 +62,9 @@
   "item.label.友情链接": {
     "message": "Links",
     "description": "Navbar item with label 友情链接"
+  },
+  "item.label.十几个为什么": {
+    "message": "十几个为什么",
+    "description": "Navbar item with label 十几个为什么"
   }
 }

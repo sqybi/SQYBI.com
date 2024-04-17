@@ -5,17 +5,17 @@ hide_table_of_contents: false
 last_translated_at: 2024-04-17T08:29:26.813Z
 ---
 
-# About the author
+## About the author
 
-## Who is sqybi?
+### Who is sqybi?
 
 A real, living person, not an AI.
 
 He believes that living is slightly more important than merely surviving, though this is not an absolute.
 
-He is case-sensitive; please try not to call him Sqybi, though this too is not an absolute.
+He is case-sensitive; please try not to call him `Sqybi`, though this too is not an absolute.
 
-## What are his interests?
+### What are his interests?
 
 He has been working as a programmer for over ten years, so naturally, his primary interests are topics related to programming and technology. He enjoys using his skills to solve various problems encountered in life and usually publishes this code on [his own GitHub](https://github.com/sqybi/). He genuinely hopes that team members working with him share similar interests.
 
@@ -32,7 +32,7 @@ He also has other interests that he hasn't consistently pursued but has delved i
 - Soccer: His favorite sport during school; although his physical fitness has significantly declined since university, making offline play challenging, his fascination with soccer tactics and strategies grows.
 - Gaming: He has explored various types of games; initially preferring story-driven RPGs during his educational phase, he later experienced many AVG games; as work took up more time, he shifted toward short-session PvP games, indie games, and party games, while maintaining intermittent interest in popular game categories like card games, Roguelike, MMORPGs, and various mainstream AAA titles; he once received an offer from MiHoYo but didn’t join, missing out on becoming one of the single-digit-numbered employees, so in recent years also includes mobile games.
 
-## What are his favorite games?
+### What are his favorite games?
 
 He finds listing his favorite games as intimate as listing his personal experiences, but he doesn't mind sharing his preferences.
 
@@ -43,25 +43,25 @@ He finds listing his favorite games as intimate as listing his personal experien
 - Monster Hunter series: Compared to Dark-Soul-like games, Monster Hunter offers more joy.
 - Steins;Gate series: The only AVG game he willingly recommends to others.
 
-## What are his favorite animations?
+### What are his favorite animations?
 
 Answering this is truly difficult, even today’s answers might not align with the ratings he's previously given on [Bangumi](https://bgm.tv/).
 
 He hopes to write some blog posts specifically discussing this topic in the future.
 
-# About the website
+## About the website
 
-## What is this website?
+### What is this website?
 
 This is the personal website of maintainer sqybi, named [SQYBI.com](https://sqybi.com/).
 
 Currently, the content is primarily blog-based, but the possibility of adding other modules in the future is not excluded.
 
-## Why build this website?
+### Why build this website?
 
 This question is answered in the first blog post after the site's establishment, see [SQYBI.com: Relaunching After a Decade](/blog/sqybi-com-relaunching-after-a-decade/).
 
-## Why do I get a 404 page when clicking a link from elsewhere?
+### Why do I get a 404 page when clicking a link from elsewhere?
 
 This website was rebuilt in 2023. An older version under the same domain was maintained before but wasn’t updated for a long time.
 
