@@ -48,16 +48,25 @@ const translate = async (content, targetLang) => {
     return result;
 };
 
-const translateFile = async (filePath, targetLang) => {
+const translateFile = async (filePath, targetLang, type) => {
     console.log(`Processing ${filePath}...`);
 
     const frontmatterRegex = /^---\n(.*)---\n(.*)/s;
     const lastTranslatedTimeRegex = /last_translated_at:\s*(.*)\n/s;
 
-    const blogPath = path.join(__dirname, '../blog');
+    var basePath = '';
+    var outputPath = '';
+    if (type === 'blog') {
+        basePath = '../blog';
+        outputPath = '../i18n/en-US/docusaurus-plugin-content-blog';
+    } else if (type === 'page') {
+        basePath = '../src/pages';
+        outputPath = '../i18n/en-US/docusaurus-plugin-content-pages';
+    }
+    const folderPath = path.join(__dirname, basePath);
     const fileContent = fs.readFileSync(filePath, 'utf-8');
 
-    const translationFolder = path.join(__dirname, '../i18n/en-US/docusaurus-plugin-content-blog', path.relative(blogPath, path.dirname(filePath)));
+    const translationFolder = path.join(__dirname, outputPath, path.relative(folderPath, path.dirname(filePath)));
     if (!fs.existsSync(translationFolder)) {
         fs.mkdirSync(translationFolder, { recursive: true });
     }
@@ -108,15 +117,15 @@ const translateFile = async (filePath, targetLang) => {
     console.log('Done!');
 };
 
-const searchFiles = async (basePath, targetLang) => {
+const searchFiles = async (basePath, targetLang, type) => {
     const items = fs.readdirSync(basePath);
     for (const item of items) {
         const itemPath = path.join(basePath, item);
         const itemStats = fs.statSync(itemPath);
         if (itemStats.isDirectory()) {
-            await searchFiles(itemPath, targetLang);
+            await searchFiles(itemPath, targetLang, type);
         } else if (itemStats.isFile() && (item.endsWith('.md') || item.endsWith('.mdx'))) {
-            await translateFile(itemPath, targetLang);
+            await translateFile(itemPath, targetLang, type);
             console.log('----------------------------------------');
         }
     }
@@ -124,7 +133,10 @@ const searchFiles = async (basePath, targetLang) => {
 
 const translateAllFiles = async (targetLang) => {
     const blogPath = path.join(__dirname, '../blog');
-    await searchFiles(blogPath, targetLang);
+    await searchFiles(blogPath, targetLang, 'blog');
+
+    const pagePath = path.join(__dirname, '../src/pages');
+    await searchFiles(pagePath, targetLang, 'page');
 };
 
 (async () => {
