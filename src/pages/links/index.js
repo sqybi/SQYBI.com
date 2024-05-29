@@ -56,6 +56,14 @@ const links = [
             image: '/img/links/qianlizhihao.jpg',
             link: 'https://blog.gadore.top/',
         },
+        {
+            owner: 'Zeee',
+            title: 'VELAS 电波站',
+            description: '欢迎来到Velas电波站！',
+            comment: <Translate>一位专业是人机交互方向的网友，从行文就觉得“啊，这是一个和我相似的人”，El Psy Kongroo</Translate>,
+            image: '/img/links/zeee.webp',
+            link: 'https://www.velasx.com/',
+        },
     ],
 ];
 
