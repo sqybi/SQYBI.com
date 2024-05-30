@@ -74,18 +74,18 @@ const config = {
           postsPerPage: 10,
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} SQYBI.com.`,
+            copyright: `Copyright © 2023-${new Date().getFullYear()} SQYBI.com.`,
             createFeedItems: async (params) => {
               const { blogPosts, defaultCreateFeedItems, ...rest } = params;
               return defaultCreateFeedItems({
-                // keep only the 10 most recent blog posts in the feed
-                blogPosts: blogPosts.filter((item, index) => index < 10),
+                // keep only the 50 most recent blog posts in the feed
+                blogPosts: blogPosts.filter((item, index) => index < 50),
                 ...rest,
               });
             },
           },
           blogSidebarTitle: '近期文章',
-          blogSidebarCount: 10,
+          blogSidebarCount: 20,
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
