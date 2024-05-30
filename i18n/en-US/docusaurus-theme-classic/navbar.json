@@ -66,5 +66,9 @@
   "item.label.十几个为什么": {
     "message": "A Dozen Whys",
     "description": "Navbar item with label 十几个为什么"
+  },
+  "item.label.所有文章": {
+    "message": "Archive",
+    "description": "Navbar item with label 所有文章"
   }
 }
