@@ -118,12 +118,13 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      // announcementBar: {
-      //   id: 'welcome',
-      //   content:
-      //     'SQYBI.com 正式上线！欢迎访问！',
-      //   isCloseable: true,
-      // },
+      announcementBar: {
+        id: 'archive',
+        content:
+          '网站增加了“所有文章”页面，可以从导航栏点击访问，或从<a href="/archive">这里</a>访问',
+        backgroundColor: "var(--ifm-color-secondary)",
+        isCloseable: true,
+      },
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
@@ -136,6 +137,7 @@ const config = {
         },
         items: [
           { to: '/blog', label: '博客', position: 'left' },
+          { to: '/archive', label: '所有文章', position: 'left' },
           {
             type: 'dropdown',
             label: '文章分类',
