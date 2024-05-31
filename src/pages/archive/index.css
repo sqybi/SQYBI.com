@@ -1,41 +1,37 @@
-.archive-list li {
-    list-style-type: none;
-}
-
 .features {
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
-    width: 100%;
-  }
-
-body {
-    margin: 0;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
 }
 
 .archive-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .archive-list li {
-    padding: 15px 20px;
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.3s ease;
+  list-style-type: none;
+  padding: 15px 30px;
+  border-bottom: 1px solid #e5e5e5;
+  transition: background-color 0.3s ease;
 }
 
 .archive-list li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .archive-list li:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.archive-list a:hover {
+  cursor: pointer;
 }
