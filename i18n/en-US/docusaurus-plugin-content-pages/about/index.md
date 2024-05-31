@@ -5,11 +5,21 @@ hide_table_of_contents: false
 last_translated_at: 2024-04-17T08:29:26.813Z
 ---
 
+:::info[Translation Tool]
+
+This article was translated by ChatGPT automatically, with minor manual corrections.
+
+:::
+
 ## About the author
 
 ### Who is sqybi?
 
 A real, living person, not an AI.
+
+Professionally a backend programmer, ex-Microsoftie, ex-Googler. After leaving Google, he worked in the autonomous driving industry for many years and is now engaged in the quantitative investment industry.
+
+Although involved in various industries, he has always been on the path of trying to design and implement better software.
 
 He believes that living is slightly more important than merely surviving, though this is not an absolute.
 
@@ -37,7 +47,7 @@ He also has other interests that he hasn't consistently pursued but has delved i
 He finds listing his favorite games as intimate as listing his personal experiences, but he doesn't mind sharing his preferences.
 
 - Overwatch: His most captivating FPS game, particularly loving the tactical teamwork; the game’s art style also greatly appeals to him.
-- FIFA series: As a physical substitute for soccer, football games provide an opportunity to experience tactical play; he finds exploring different tactics’ impact on the game more intriguing than refining technical skills (FM series, though time-consuming, isn’t listed here).
+- FIFA Series: As a compensation for insufficient physical fitness to support offline football activities, football games can to some extent provide an opportunity to experience football tactical confrontations. Compared to honing technical details, it is more interesting to explore the impact of different tactics on the game situation and the adaptation of skills and tactics (the FM series takes too much time to play, so it is not listed here).
 - Euro Truck Simulator: With 7 years of experience in the truck-autonomous-driving industry, playing a truck simulator game is just fitting.
 - Hatsume Miku's Project DIVA series: His favorite rhythm game; he spent a long time earning a platinum trophy on the F2 version on PSV, much attributed to Hatsune Miku's contributions.
 - Monster Hunter series: Compared to Dark-Soul-like games, Monster Hunter offers more joy.

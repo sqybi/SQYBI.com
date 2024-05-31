@@ -15,9 +15,9 @@
     "message": "Categories",
     "description": "Navbar item with label 文章分类"
   },
-  "item.label.RSS": {
-    "message": "RSS",
-    "description": "Navbar item with label RSS"
+  "item.label.📶RSS": {
+    "message": "📶RSS",
+    "description": "Navbar item with label 📶RSS"
   },
   "item.label.我的": {
     "message": "Mine",

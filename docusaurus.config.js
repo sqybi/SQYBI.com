@@ -137,7 +137,6 @@ const config = {
         },
         items: [
           { to: '/blog', label: '博客', position: 'left' },
-          { to: '/archive', label: '所有文章', position: 'left' },
           {
             type: 'dropdown',
             label: '文章分类',
@@ -157,9 +156,10 @@ const config = {
               },
             ],
           },
+          { to: '/archive', label: '所有文章', position: 'left' },
           { to: '/links', label: "友情链接", position: 'left' },
           { to: '/about', label: "十几个为什么", position: 'left' },
-          { to: 'pathname:///blog/rss.xml', label: "RSS", position: 'left' },
+          { to: 'pathname:///blog/rss.xml', label: "📶RSS", position: 'left' },
           {
             type: 'dropdown',
             label: '我的',

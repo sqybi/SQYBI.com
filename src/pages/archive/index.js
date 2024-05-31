@@ -1,7 +1,9 @@
 import Layout from '@theme/Layout';
-const recentPosts = require("../../../.docusaurus/docusaurus-plugin-content-blog/default/blog-post-list-prop-default.json");
 import ArchiveHeader from '../../components/ArchiveHeader';
 import './index.css';
+
+const recentPosts = require("../../../.docusaurus/docusaurus-plugin-content-blog/default/blog-post-list-prop-default.json");
+
 
 export default function Archive() {
     return (
@@ -16,14 +18,13 @@ export default function Archive() {
                                     .filter(item => !item.unlisted)
                                     .map((item, index) => (
                                         <li key={index}>
-                                            <a href={`${item.permalink}`}>{item.title}</a>{" "}
+                                            <a href={`${item.permalink}`}>{item.title}</a>
                                         </li>
                                     ))}
                             </ul>
                         </div>
                     </div>
                 </section>
-
             </main>
         </Layout>
     );
