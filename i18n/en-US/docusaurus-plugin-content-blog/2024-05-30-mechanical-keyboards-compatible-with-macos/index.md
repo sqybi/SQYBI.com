@@ -1,10 +1,10 @@
 ---
 slug: mechanical-keyboards-compatible-with-macos
-title: Mechanical Keyboards Compatible with MacOS
+title: Mechanical Keyboards Compatible with macOS
 authors: [sqybi]
 date: 2024-05-30T23:00
 tags: [random]
-keywords: [keyboard, MacOS, mechanical keyboard, NuPhy, Halo96, functional key, VGN, SKN, Varmilo]
+keywords: [keyboard, macOS, mechanical keyboard, NuPhy, Halo96, functional key, VGN, SKN, Varmilo]
 unlisted: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
@@ -32,15 +32,15 @@ Time flies, and now it's already the latter part of the month. To avoid a gap in
 
 ## Apple Good, People Bad
 
-Since I started working at Microsoft after graduation, my initial coding environment at work was purely Windows + Visual Studio. Being a competitive programmer, I naturally dabbled in Linux early on. However, it wasn't until I joined Google that I got my first MacBook and used MacOS for the first time.
+Since I started working at Microsoft after graduation, my initial coding environment at work was purely Windows + Visual Studio. Being a competitive programmer, I naturally dabbled in Linux early on. However, it wasn't until I joined Google that I got my first MacBook and used macOS for the first time.
 
-I must say, the MacOS of that time was quite suitable for programmers: it didn't have the cumbersome command line of Windows, nor did it have the myriad of bugs one would encounter with X on Linux. Not to mention, back then, Windows hadn't even polished Powershell, while Linux distributions, even without a graphical interface, still had various headaches—anyone who used Arch Linux at the time can recall how its so-called rolling updates often required a complete reinstall if you went months without updating.
+I must say, the macOS of that time was quite suitable for programmers: it didn't have the cumbersome command line of Windows, nor did it have the myriad of bugs one would encounter with X on Linux. Not to mention, back then, Windows hadn't even polished Powershell, while Linux distributions, even without a graphical interface, still had various headaches—anyone who used Arch Linux at the time can recall how its so-called rolling updates often required a complete reinstall if you went months without updating.
 
-By contrast, MacOS had a relatively stable GUI experience along with a functional shell, making it perfect for development tasks like running git and SSH.
+By contrast, macOS had a relatively stable GUI experience along with a functional shell, making it perfect for development tasks like running git and SSH.
 
 Apart from computers, keyboards are also an important part of a programmer's work. I owned a few mechanical keyboards early on when the market for them was still immature, with Cherry and FILCO being the top choices. I didn't give much thought to the differences between Mac and Windows shortcut keys. Even though they were functionally inconvenient, I made do.
 
-At that time, Apple products were generally seen as: closed but user-friendly. Steve Jobs, still alive, was highly glorified. With Windows and Linux still having certain shortcomings, most people just went with the flow. If MacOS wasn't user-friendly, the problem was seen as "my" fault, not Apple's. **Apple good, people bad!**
+At that time, Apple products were generally seen as: closed but user-friendly. Steve Jobs, still alive, was highly glorified. With Windows and Linux still having certain shortcomings, most people just went with the flow. If macOS wasn't user-friendly, the problem was seen as "my" fault, not Apple's. **Apple good, people bad!**
 
 Later, after leaving Google, the new company's development and production environments were all on Ubuntu. Those years saw the rise of Ubuntu's desktop environment, and with increasing work and life pressures, I had less leisure time, naturally shifting to Ubuntu, which I had once looked down upon—it turned out to be quite comfortable. Despite some minor issues, it was much more usable than a few years earlier.
 
@@ -68,7 +68,7 @@ When I connect them—
 
 Darn it, despite switching the F keys' default function in the system settings to prioritize F1-F12 over multimedia keys (which even works on the laptop keyboard), my external keyboard still doesn't follow suit!
 
-I was using a VGN S99 with Anya switches, and I quite liked both its appearance and switches. This keyboard claimed to support MacOS, yet having to press the Fn key along with the F keys each time was intolerable.
+I was using a VGN S99 with Anya switches, and I quite liked both its appearance and switches. This keyboard claimed to support macOS, yet having to press the Fn key along with the F keys each time was intolerable.
 
 After some research, I found an explanation on V2EX: Apple's F keys, function keys, and Fn key are indeed triggered differently from Windows keyboards. However, the real reason the F keys couldn't switch was that only officially certified keyboards supported this function. Other keyboards had their codes blocked by Apple, but some could simulate official codes to switch functions.
 
@@ -105,7 +105,7 @@ Here's the key point: NuPhy's Air and Halo series products can meet the aforemen
 
 The Air series' advantage is its support for QMK/VIA, allowing more flexible remapping. The downside for me is that it's a low-profile keyboard, unsuitable given my strong finger pressure.
 
-The Halo series process exemplifies mass-produced advantages. Customer service professionally assured me that the keyboard, using NuPhy's remapping software, perfectly suited MacOS and guaranteed F key swapping. As a mass-produced product, it also had a huge edge over custom keyboards: a seven-day no-questions-asked return policy! Customer service even suggested trying it at home, promising a return option with shipping insurance if unsatisfied.
+The Halo series process exemplifies mass-produced advantages. Customer service professionally assured me that the keyboard, using NuPhy's remapping software, perfectly suited macOS and guaranteed F key swapping. As a mass-produced product, it also had a huge edge over custom keyboards: a seven-day no-questions-asked return policy! Customer service even suggested trying it at home, promising a return option with shipping insurance if unsatisfied.
 
 Ultimately, I chose the Halo series' 96% layout, compromising some Insert area function keys but retaining the numeric pad. I accidentally selected Cold Green Rose switches, a tactile switch. Although I stopped using tactile switches after feeling Varmilo's electrostatic capacitive switches, preferring linear switches, I decided to stick with it.
 
