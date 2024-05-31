@@ -18,7 +18,7 @@
 
 .archive-list li {
   list-style-type: none;
-  padding: 15px 30px;
+  padding: 10px 30px;
   border-bottom: 1px solid #e5e5e5;
   transition: background-color 0.3s ease;
 }
@@ -27,11 +27,74 @@
   border-bottom: none;
 }
 
-.archive-list li:hover {
+.archive-list-inner li {
+  padding: 5px 10px;
+}
+
+.archive-list-inner li:hover {
   background-color: #f1f1f1;
   cursor: pointer;
+  border-radius: 8px;
+}
+
+.archive-list a {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 6px;
+
+  transition: all 0.2s ease;
+}
+
+.archive-list a::before, .archive-list a::after {
+  background-color: var(--ifm-color-primary);
+  transition: all 0.2s ease;
+}
+
+.archive-list a::before {
+  top: 0;
+  left: 50%;
+}
+
+.archive-list a::after {
+  bottom: 0;
+  right: 50%;
 }
 
 .archive-list a:hover {
-  cursor: pointer;
+  color: #fff;
+  background-color: var(--ifm-color-primary);
+}
+
+.archive-list a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.archive-list a:hover::after {
+  width: 100%;
+  right: 0;
+}
+
+.highlight-box {
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 6px;
+  padding: 0px 2px;
+  display: inline-block;
+}
+
+.highlight-box-date {
+  color: var(--ifm-color-primary);
+  border: outset rgba(var(--ifm-color-primary-rgb), 0.2);
+  border-radius: 4px;
+  padding: 0px 2px;
+  display: inline-block;
+}
+
+.highlight-box-tag {
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 2px;
+  border-left-width: 6px;
+  padding: 0px 6px 0px 2px;
+  display: inline-block;
 }

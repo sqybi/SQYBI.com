@@ -225,6 +225,7 @@ const config = {
         disableInDev: false,
       },
     ],
+    './plugins/blog-list',
   ],
 
   stylesheets: [
