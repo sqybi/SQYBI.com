@@ -6,6 +6,26 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base: "Noto Serif SC",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --ifm-font-weight-light: 200;
+  --ifm-font-weight-normal: 300;
+  --ifm-font-weight-semibold: 500;
+  --ifm-font-weight-bold: 800;
+  --ifm-font-weight-base: var(--ifm-font-weight-normal);
+  --ifm-heading-font-weight: var(--ifm-font-weight-bold);
+  --ifm-font-size-base: 120%;
+  --ifm-blockquote-font-size: 95%;
+  --ifm-code-font-size: 95%;
+  background-image: url('/img/texture.png');
+  blockquote::before {
+    content: "“";
+    font-size: 2em;
+    color: var(--ifm-blockquote-border-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
   --ifm-color-primary: #6b8541;
   --ifm-color-primary-rgb: 107, 133, 65;
   --ifm-color-primary-dark: #60783b;
@@ -14,8 +34,12 @@
   --ifm-color-primary-light: #769248;
   --ifm-color-primary-lighter: #7b994b;
   --ifm-color-primary-lightest: #8bac55;
-  --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: #e4e2d3;
+  --ifm-background-surface-color: #f1f0e9;
+  --ifm-code-background: #d6d3bd;
+  text-shadow: 0 0 .75px var(--ifm-color-gray-700);
+  --ifm-blockquote-border-color: #c9c5a8;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -28,6 +52,11 @@
   --ifm-color-primary-lighter: #9db96f;
   --ifm-color-primary-lightest: #aec589;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #211f15;
+  --ifm-background-surface-color: #2e2c1b;
+  --ifm-code-background: #14130c;
+  text-shadow: 0 0 .75px var(--ifm-color-gray-300);
+  --ifm-blockquote-border-color: #3b3921;
 }
 
 [data-theme='light'] img[src$='#dark-mode-only'],
@@ -36,4 +65,38 @@
 }
 
 @media screen and (max-width: 996px) {
+}
+
+article h1::before,
+article h2::before,
+article h3::before,
+article h4::before,
+article h5::before,
+article h6::before {
+  color: #d3d3d380;
+  font-size: 0.6em;
+  margin-right: 0.3rem;
+}
+[data-theme='dark'] article h1::before,
+[data-theme='dark'] article h2::before,
+[data-theme='dark'] article h3::before,
+[data-theme='dark'] article h4::before,
+[data-theme='dark'] article h5::before,
+[data-theme='dark'] article h6::before {
+  color: #2c2c2c80;
+}
+article h1::before { content: "H1"; }
+article h2::before { content: "H2"; }
+article h3::before { content: "H3"; }
+article h4::before { content: "H4"; }
+article h5::before { content: "H5"; }
+article h6::before { content: "H6"; }
+
+article header h1::before,
+article header h2::before,
+article header h3::before,
+article header h4::before,
+article header h5::before,
+article header h6::before {
+  content: ""
 }
