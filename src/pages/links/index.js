@@ -67,8 +67,6 @@ const links = [
     ],
 ];
 
-
-
 function Card({ owner, title, description, comment, image, link }) {
     return (
         <div class="link-card">
@@ -85,8 +83,8 @@ function Card({ owner, title, description, comment, image, link }) {
                     <div class="margin-top--md">
                         <span class="badge badge--secondary">{description}</span>
                     </div>
-                    <div class="margin-top--md">
-                        <em>{comment}</em>
+                    <div class="margin-top--md comment-text">
+                        {comment}
                     </div>
                     <div class="margin-top--lg">
                         <a href={link} target="_blank" rel="noopener noreferrer"><button class="button button--primary button--block"><Translate>访问</Translate></button></a>

@@ -10,7 +10,7 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--ifm-background-surface-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   overflow: hidden;
@@ -19,7 +19,7 @@
 .archive-list li {
   list-style-type: none;
   padding: 10px 30px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--ifm-color-secondary-contrast-background);
   transition: background-color 0.3s ease;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .archive-list-inner li:hover {
-  background-color: #f1f1f1;
+  background-color: var(--ifm-color-secondary-contrast-background);
   cursor: pointer;
   border-radius: 8px;
 }

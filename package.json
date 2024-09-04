@@ -14,7 +14,8 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-10-30 --proxy 3000 -- npm run start",
     "pages:deploy": "NODE_VERSION=16 npm run build && wrangler pages deploy ./build",
-    "translate": "dotenv node scripts/translate.js"
+    "translate": "dotenv node scripts/translate.js",
+    "download-fonts": "dotenv node scripts/download_fonts.js"
   },
   "dependencies": {
     "@docusaurus/core": "^3.5.2",

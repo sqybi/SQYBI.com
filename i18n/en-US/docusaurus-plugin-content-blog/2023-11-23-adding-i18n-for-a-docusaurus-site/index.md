@@ -24,6 +24,8 @@ Unfortunately, things didn't turn out as desired. On the very night the article 
 
 Because of various emergencies, I've been incredibly busy these days. Fortunately, after checking in last night and during the flight back to Beijing today, I still had a few hours of free time. I used this time to quickly add support for multiple languages (i18n) to the website, and I can also write a short article to introduce how I've made use of large models in my development process.
 
+<!-- truncate -->
+
 ## i18n Support in Docusaurus
 
 For professionals in the computer industry, i18n is likely not an unfamiliar term. In fact, this word is an abbreviation for "internationalization", omitting the 'i' and 'n' at the beginning and end, there are exactly 18 letters in between.

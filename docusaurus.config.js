@@ -90,7 +90,10 @@ const config = {
           rehypePlugins: [rehypeKatex],
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+            './src/css/custom-font.css',
+            './src/css/custom.css',
+          ],
         },
         sitemap: {
           changefreq: 'weekly',
@@ -199,7 +202,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} SQYBI.com<br />Built with Docusaurus.`,
+        copyright: `Copyright © 2023-${new Date().getFullYear()} SQYBI.com<br />Built with Docusaurus.<br /><a href=\"https://www.foreverblog.cn/blog/5675/cert.html\" target=\"_blank\"><img src=\"https://img.foreverblog.cn/logo_en_default.png\" alt=\"\" style=\"width:auto;height:16px;\"></a>`,
       },
       prism: {
         theme: prismThemes.github,

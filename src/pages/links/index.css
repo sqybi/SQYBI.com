@@ -96,3 +96,7 @@
   border-radius: 3px;
   font-size: larger;
 }
+
+.comment-text {
+  font-size: 80%;
+}
