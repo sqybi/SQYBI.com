@@ -16,15 +16,6 @@
   --ifm-font-size-base: 120%;
   --ifm-blockquote-font-size: 95%;
   --ifm-code-font-size: 95%;
-  background-image: url('/img/texture.png');
-  blockquote::before {
-    content: "“";
-    font-size: 2em;
-    color: var(--ifm-blockquote-border-color);
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
 
   --ifm-color-primary: #6b8541;
   --ifm-color-primary-rgb: 107, 133, 65;
@@ -98,5 +89,32 @@ article header h3::before,
 article header h4::before,
 article header h5::before,
 article header h6::before {
-  content: ""
+  content: none;
+}
+
+blockquote {
+  position: relative;
+  border-left: none;
+  margin-left: 1.2em;
+}
+
+blockquote::before {
+  content: '\201C';
+  font-size: 4em;
+  color: var(--ifm-blockquote-border-color);
+  position: absolute;
+  margin-left: -1.1em;
+  margin-top: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.alert--secondary {
+  --ifm-alert-background-color: var(--ifm-background-surface-color);
+}
+
+html {
+  background-image: url("/img/texture.png");
 }
