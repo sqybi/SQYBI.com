@@ -17,6 +17,7 @@
   --ifm-blockquote-font-size: 95%;
   --ifm-code-font-size: 95%;
 
+  /* These will be repeated in the dark mode section */
   --ifm-color-primary: #6b8541;
   --ifm-color-primary-rgb: 107, 133, 65;
   --ifm-color-primary-dark: #60783b;
@@ -26,6 +27,7 @@
   --ifm-color-primary-lighter: #7b994b;
   --ifm-color-primary-lightest: #8bac55;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-tag-list-border: var(--ifm-color-secondary-darker) !important;
   --ifm-background-color: #e4e2d3;
   --ifm-background-surface-color: #f1f0e9;
   --ifm-code-background: #d6d3bd;
@@ -43,6 +45,7 @@
   --ifm-color-primary-lighter: #9db96f;
   --ifm-color-primary-lightest: #aec589;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docusaurus-tag-list-border: var(--ifm-color-secondary-darkest);
   --ifm-background-color: #211f15;
   --ifm-background-surface-color: #2e2c1b;
   --ifm-code-background: #14130c;

@@ -1,0 +1,26 @@
+technology:
+  label: "Categories | Technology"
+  description: "As a programmer, it's natural for there to be a sharing of computer-related technologies here.<br />Programming, networking, hardware... various types of shares might occur. I will also share some projects that I have developed, as well as the technologies used and insights gained during the development process."
+  permalink: "/technology"
+photography:
+  label: "Categories | Photography"
+  description: "Photography is one of my main hobbies.<br />From time to time, I select some of the photos I've taken and share the stories behind them, as well as insights from post-processing. Additionally, I would introduce some basic principles and techniques related to photography."
+  permalink: "/photography"
+random:
+  label: "Categories | Random Thoughts"
+  description: "In addition to some serious articles, I will also share some of my random thoughts here.<br />They might be my sudden whims, or some of my strange epiphanies."
+  permalink: "/random"
+
+from-taking-pictures-to-photography:
+  label: "Series | From Taking Pictures to Photography"
+  description: "Summarizing technical issues in photography.<br />Although seasoned photographers might scoff at it, as a beginner, you will surely benefit enormously—since photography is a hobby that is a lot more about satisfying yourself than pleasing others, why take the naysaying of veterans too seriously?"
+  permalink: "/from-taking-pictures-to-photography"
+becoming-an-brilliant-programmer:
+  label: "Series | Becoming an Brilliant Programmer"
+  description: "Even if I don't have noble ideals, sharing my knowledge and perceptions is always a good thing.<br />It currently relates to the profession and work of programmers, but it will delve into many life reflections; later, I might talk about life-related content."
+  permalink: "/becoming-an-brilliant-programmer"
+
+software-recommendation:
+  label: "Topic | Software Recommendation"
+  description: "Recommending software and applications that have been personally tested and found useful in daily life."
+  permalink: "software-recommendation"

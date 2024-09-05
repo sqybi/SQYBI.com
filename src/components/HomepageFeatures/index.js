@@ -12,7 +12,7 @@ const FeatureList = [
       <>
         <p>
           <Translate>作为一个程序员，这里自然少不了关于计算机相关技术的分享。</Translate><br />
-          <Translate>编程、网络、硬件……各种类型的分享都可能会出现。我也可能分享我自己开发的一些项目，以及开发过程中使用的技术和相关心得。</Translate>
+          <Translate>编程、网络、硬件……各种类型的分享都可能会出现。我会分享我自己开发的一些项目，以及开发过程中使用的技术和相关心得。</Translate>
         </p>
         <p><Translate>可以通过标签</Translate> <a href="/blog/tags/technology/">#technology</a> <Translate>查询所有关于计算机技术的文章。</Translate></p>
         <p>
@@ -30,7 +30,7 @@ const FeatureList = [
       <>
         <p>
           <Translate>摄影是我的主要业余爱好之一。</Translate><br />
-          <Translate>我会不定期挑选一些我拍摄的照片，并分享背后拍摄的故事和后期心得。另外，我也可能会介绍一些摄影相关的基本原理和技术。</Translate>
+          <Translate>我会不定期挑选一些我拍摄的照片，并分享背后拍摄的故事和后期心得。另外，我也会介绍一些摄影相关的基本原理和技术。</Translate>
         </p>
         <p><Translate>可以通过标签</Translate> <a href="/blog/tags/photography/">#photography</a> <Translate>查询所有关于摄影的文章。</Translate></p>
         <p>

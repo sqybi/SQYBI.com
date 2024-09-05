@@ -73,6 +73,7 @@ const config = {
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
           postsPerPage: 10,
           feedOptions: {
+            xslt: true,
             type: 'all',
             copyright: `Copyright © 2023-${new Date().getFullYear()} SQYBI.com.`,
             createFeedItems: async (params) => {
@@ -88,6 +89,7 @@ const config = {
           blogSidebarCount: 20,
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
+          onInlineTags: 'throw',
         },
         theme: {
           customCss: [
@@ -121,13 +123,13 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      announcementBar: {
-        id: 'archive',
-        content:
-          '网站增加了“所有文章”页面，可以从导航栏点击访问，或从<a href="/archive">这里</a>访问',
-        backgroundColor: "var(--ifm-color-secondary)",
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'archive',
+      //   content:
+      //     '网站增加了“所有文章”页面，可以从导航栏点击访问，或从<a href="/archive">这里</a>访问',
+      //   backgroundColor: "var(--ifm-color-secondary)",
+      //   isCloseable: true,
+      // },
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
@@ -139,30 +141,38 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          { to: '/blog', label: '博客', position: 'left' },
+          // Links on the left side of the navbar
           {
-            type: 'dropdown',
-            label: '文章分类',
+            to: '/blog',
+            label: '博客',
             position: 'left',
-            items: [
-              {
-                label: '碎碎念',
-                to: '/blog/tags/random/'
-              },
-              {
-                label: '计算机技术',
-                to: '/blog/tags/technology/'
-              },
-              {
-                label: '摄影',
-                to: '/blog/tags/photography/'
-              },
-            ],
           },
-          { to: '/archive', label: '所有文章', position: 'left' },
-          { to: '/links', label: "友情链接", position: 'left' },
-          { to: '/about', label: "十几个为什么", position: 'left' },
-          { to: 'pathname:///blog/rss.xml', label: "📶RSS", position: 'left' },
+          {
+            to: '/blog/tags/',
+            label: '所有标签',
+            position: 'left',
+          },
+          {
+            to: '/archive',
+            label: '所有文章',
+            position: 'left',
+          },
+          {
+            to: '/links',
+            label: "友情链接",
+            position: 'left',
+          },
+          {
+            to: '/about',
+            label: "十几个为什么",
+            position: 'left',
+          },
+          {
+            to: 'pathname:///blog/rss.xml',
+            label: "📶RSS",
+            position: 'left',
+          },
+          // Links on the right side of the navbar
           {
             type: 'dropdown',
             label: '我的',
@@ -202,7 +212,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © 2023-${new Date().getFullYear()} SQYBI.com<br />Built with Docusaurus.<br /><a href=\"https://www.foreverblog.cn/blog/5675/cert.html\" target=\"_blank\"><img src=\"https://img.foreverblog.cn/logo_en_default.png\" alt=\"\" style=\"width:auto;height:16px;\"></a>`,
+        copyright: `Copyright © 2023-${new Date().getFullYear()} SQYBI.com<br />Built with Docusaurus. Served by Cloudflare.<br /><a href=\"https://www.foreverblog.cn/blog/5675/cert.html\" target=\"_blank\"><img src=\"https://img.foreverblog.cn/logo_en_default.png\" alt=\"\" style=\"width:auto;height:16px;\"></a>`,
       },
       prism: {
         theme: prismThemes.github,
