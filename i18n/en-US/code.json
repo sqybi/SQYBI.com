@@ -121,10 +121,6 @@
     "message": "Breadcrumbs",
     "description": "The ARIA label for the breadcrumbs"
   },
-  "theme.docs.DocCard.categoryDescription": {
-    "message": "{count} items",
-    "description": "The default description for a category card in the generated index about how many items this category includes"
-  },
   "theme.docs.paginator.navAriaLabel": {
     "message": "Docs pages",
     "description": "The ARIA label for the docs pagination"
@@ -352,14 +348,6 @@
     "message": "Tags",
     "description": "The title of the tag list page"
   },
-  "theme.unlistedContent.title": {
-    "message": "Unlisted page",
-    "description": "The unlisted content banner title"
-  },
-  "theme.unlistedContent.message": {
-    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
-    "description": "The unlisted content banner message"
-  },
   "计算机技术": {
     "message": "Technology"
   },
@@ -505,5 +493,8 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
     "description": "The draft content banner message"
+  },
+  "虽然不一定全部认同这个博客的观点，但是很喜欢它的行文方式和美术设计。": {
+    "message": "Although I don't necessarily agree with all the viewpoints of this blog, I really like its writing style and artistic design."
   }
 }
