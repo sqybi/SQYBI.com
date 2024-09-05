@@ -7,6 +7,7 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-font-family-base: "Noto Serif SC",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --ifm-font-family-monospace: "Courier Prime",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   --ifm-font-weight-light: 200;
   --ifm-font-weight-normal: 300;
   --ifm-font-weight-semibold: 500;
@@ -15,7 +16,7 @@
   --ifm-heading-font-weight: var(--ifm-font-weight-bold);
   --ifm-font-size-base: 120%;
   --ifm-blockquote-font-size: 95%;
-  --ifm-code-font-size: 95%;
+  --ifm-code-font-size: 80%;
 
   /* These will be repeated in the dark mode section */
   --ifm-color-primary: #6b8541;

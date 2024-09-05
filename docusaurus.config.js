@@ -90,6 +90,7 @@ const config = {
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
           onInlineTags: 'throw',
+          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: [

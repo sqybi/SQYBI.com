@@ -33,13 +33,28 @@ const links = [
         {
             owner: 'abc881858',
             title: 'Qt编程思想',
-            description: 'https://thinkinginQt.com',
             comment: <Translate>认识许久的网友，持续专注于 Qt 相关领域</Translate>,
             image: '/img/links/abc881858.png',
             link: 'https://thinkinginqt.com/',
         },
     ],
     [
+        {
+            owner: 'MÖBIUS',
+            title: '莫比乌斯',
+            description: '这个博客，不是碎片的“我”，而是真实的“我”，当然也有可能是让虚伪或真相厌恶的“我”。',
+            comment: <Translate>虽然不一定全部认同这个博客的观点，但是很喜欢它的行文方式和美术设计。</Translate>,
+            image: '/img/links/mobius.png',
+            link: 'https://onojyun.com/',
+        },
+        {
+            owner: 'Zeee',
+            title: 'VELAS 电波站',
+            description: '欢迎来到Velas电波站！',
+            comment: <Translate>一位专业是人机交互方向的网友，从行文就觉得“啊，这是一个和我相似的人”，El Psy Kongroo</Translate>,
+            image: '/img/links/zeee.webp',
+            link: 'https://www.velasx.com/',
+        },
         {
             owner: 'whyes',
             title: 'whyes 的博客',
@@ -55,14 +70,6 @@ const links = [
             comment: <Translate>同样在 2023 年重启了自己博客的网友，相识于少数派</Translate>,
             image: '/img/links/qianlizhihao.jpg',
             link: 'https://blog.gadore.top/',
-        },
-        {
-            owner: 'Zeee',
-            title: 'VELAS 电波站',
-            description: '欢迎来到Velas电波站！',
-            comment: <Translate>一位专业是人机交互方向的网友，从行文就觉得“啊，这是一个和我相似的人”，El Psy Kongroo</Translate>,
-            image: '/img/links/zeee.webp',
-            link: 'https://www.velasx.com/',
         },
     ],
 ];
@@ -80,13 +87,15 @@ function Card({ owner, title, description, comment, image, link }) {
                     <div>
                         <strong>{title}</strong> | <span class="badge badge--info">{owner}</span>
                     </div>
-                    <div class="margin-top--md">
-                        <span class="badge badge--secondary">{description}</span>
-                    </div>
+                    {description
+                        ? (<div class="margin-top--md">
+                            <span class="badge badge--secondary">{description}</span>
+                        </div>)
+                        : ''}
                     <div class="margin-top--md comment-text">
                         {comment}
                     </div>
-                    <div class="margin-top--lg">
+                    <div class="margin-top--md">
                         <a href={link} target="_blank" rel="noopener noreferrer"><button class="button button--primary button--block"><Translate>访问</Translate></button></a>
                     </div>
                 </div>

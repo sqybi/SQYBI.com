@@ -23,6 +23,12 @@ The [SQYBI.com](https://sqybi.com) website.
 - Use `npm run write-translations -- --locale {target_locale}` to append new translation items.
 - Translate them by yourself.
 
+## Fonts
+
+This site uses `Noto Serif SC` and `JetBrains Mono` as default font.
+
+Use `npm run download-fonts` to download and upgrade fonts from Google Fonts. Update `custom-font.css.template` if necessary.
+
 ## Upgrade Docusaurus
 
 There will be an alert like this if new version of Docusaurus released:
