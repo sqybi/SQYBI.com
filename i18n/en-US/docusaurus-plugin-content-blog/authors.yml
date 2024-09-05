@@ -1,6 +1,17 @@
 sqybi:
   name: sqybi
-  title: Software Developer @ TuSimple
+  title: Software Developer @ Metabit
   url: https://sqybi.com/about/
   image_url: https://gravatar.com/userimage/1511704/652acb791a5d92735e45b4abb20b2c00.jpeg?size=256
-  email: sqybi@126.com
+  email: contact@sqybi.com
+  socials:
+    Telegram Channel: https://t.me/sqybi_channel
+    About Me: https://sqybi.com/about/
+    github: sqybi
+    stackoverflow: 1210366
+    linkedin: sqybi
+    Flickr: https://www.flickr.com/sqybi
+    Bilibili: https://space.bilibili.com/105879
+    x: sqybi
+    Facebook: https://facebook.com/sqybi
+  page: true
