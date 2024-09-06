@@ -30,7 +30,6 @@ export default function GiscusComponent() {
             inputPosition="top"
             theme={colorMode}
             lang={localeMap[currentLocale] ?? currentLocale}
-            loading="lazy"
             crossorigin="anonymous"
             async />
     );
