@@ -139,12 +139,6 @@
   outline: 2px dashed var(--ifm-color-danger) !important;
 }
 
-.comment-input .comment-edit-warning {
-  border: 3px 2px 2px 2px dashed var(--ifm-color-danger) !important;
-  -webkit-transition: border 2s linear;
-  transition: border 2s linear;
-}
-
 [data-theme="dark"] .comment-input input {
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.3);
