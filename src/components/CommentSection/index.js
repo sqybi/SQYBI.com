@@ -52,7 +52,6 @@ const Comment = ({ comment, depth, onReply, locale }) => {
                 }
             </div>
             <div className={styles['comment-content']} dangerouslySetInnerHTML={{ __html: comment.content }} />
-
         </div>
     );
 };
@@ -66,7 +65,7 @@ const CommentSection = ({ }) => {
     const [markdown, setMarkdown] = useState('');
     const [articleId, setArticleId] = useState('');
     const [missingAuthorWarning, setMissingAuthorWarning] = useState(false);
-    const [missingEditWarning, setMissingEditWarning] = useState(false);
+    const [sendButtonDisabled, setSendButtonDisabled] = useState(true);
     const editor = useEditor({});
     const location = useLocation();
     const { i18n } = useDocusaurusContext();
@@ -97,6 +96,7 @@ const CommentSection = ({ }) => {
 
     useEffect(() => {
         localStorage.setItem(LOCAL_STORAGE_AUTHOR_KEY, author);
+        setMissingAuthorWarning(!author)
     }, [author]);
 
     useEffect(() => {
@@ -106,6 +106,10 @@ const CommentSection = ({ }) => {
     useEffect(() => {
         localStorage.setItem(LOCAL_STORAGE_WEBSITE_KEY, website);
     }, [website]);
+
+    useEffect(() => {
+        setSendButtonDisabled(!author || !markdown);
+    }, [author, markdown]);
 
     const fetchComments = async () => {
         try {
@@ -139,9 +143,9 @@ const CommentSection = ({ }) => {
 
     const handlePostComment = async () => {
         try {
-            if (!author || !editor.getMarkdown()) {
+            if (!author || !markdown) {
                 setMissingAuthorWarning(!author);
-                setMissingEditWarning(!editor.getMarkdown());
+                setSendButtonDisabled(!author || !markdown);
                 return;
             }
             const newComment = {
@@ -150,14 +154,14 @@ const CommentSection = ({ }) => {
                 author,
                 email,
                 website,
-                content: editor.getMarkdown(),
+                content: markdown,
                 timestamp_ms: Date.now(),
             };
             await axios.post(COMMENT_SERVICE_URL, newComment);
             fetchComments();
             editor.setMarkdown('');
             setReplyTo(null);
-            setMissingEditWarning(false);
+            setSendButtonDisabled(true);
         } catch (error) {
             console.error('Error posting comment:', error);
         }
@@ -179,7 +183,6 @@ const CommentSection = ({ }) => {
                     className={missingAuthorWarning ? styles['comment-author-warning'] : ''}
                     value={author}
                     onChange={(e) => {
-                        setMissingAuthorWarning(!e.target.value);
                         setAuthor(e.target.value);
                     }}
                 />
@@ -197,17 +200,16 @@ const CommentSection = ({ }) => {
                 />
 
                 <Editable
-                    className={missingEditWarning ? styles['comment-edit-warning'] + ' ' + styles['comment-edit'] : styles['comment-edit']}
+                    className={styles['comment-edit']}
                     editor={editor}
                     value={markdown}
                     throttleInMs={100}
                     placeholder="如果有什么想聊的内容，但是又感到害羞，不如先试着发一次评论看看。"
                     onChange={(e) => {
-                        setMissingEditWarning(!e);
                         setMarkdown(e);
                     }} />
 
-                <button className="button button--primary button--block" onClick={handlePostComment}>
+                <button className="button button--primary button--block" onClick={handlePostComment} disabled={sendButtonDisabled}>
                     {replyTo ? '发表回复' : '发表评论'}
                 </button>
                 {replyTo &&
