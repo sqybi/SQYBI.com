@@ -242,6 +242,10 @@ const config = {
     './plugins/blog-list',
   ],
 
+  scripts: [
+    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js',
+  ],
+
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',

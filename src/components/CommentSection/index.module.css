@@ -1,0 +1,191 @@
+.comment-divider {
+  background-color: transparent;
+  border: 0;
+  border-top: 3px double var(--ifm-color-gray-600);
+  height: 3px;
+  margin: 2rem auto;
+  width: 100px;
+}
+
+.comment-list {
+  margin-bottom: 10px;
+}
+
+.comment-list .comment-box {
+  padding: 10px;
+}
+
+.comment-list .comment-box .comment-profile {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+  position: relative;
+}
+
+.comment-list .comment-box .comment-profile img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.comment-list .comment-box .comment-profile .comment-profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comment-list
+  .comment-box
+  .comment-profile
+  .comment-profile-details
+  .comment-profile-name {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.comment-list
+  .comment-box
+  .comment-profile
+  .comment-profile-details
+  .comment-profile-date {
+  font-size: 0.7rem;
+  color: var(--ifm-color-secondary-darkest);
+}
+
+.comment-list .comment-box .comment-profile button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  opacity: 0.2;
+  overflow: hidden;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.comment-list .comment-box:hover button {
+  opacity: 1;
+}
+
+.comment-list .comment-box .comment-content {
+  border: none;
+  border-radius: 0.1rem 0.5rem 0.1rem 0.1rem;
+  box-shadow: 0rem 0rem 0.3rem var(--ifm-color-primary);
+  margin: 10px 0 0 70px;
+  padding: 20px 20px 1px 20px;
+  font-size: 95%;
+  -webkit-transition: box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear;
+}
+
+.comment-list .comment-box .comment-content:hover {
+  box-shadow: 0rem 0rem 0.7rem var(--ifm-color-primary-lightest);
+  -webkit-transition: box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear;
+}
+
+/* .comment-list .comment-box button {
+  margin: 10px 0 0 70px;
+  padding: 5px 20px;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.comment-list .comment-box:hover button {
+  max-height: 2rem;
+  opacity: 1;
+} */
+
+.comment-input {
+  margin-top: 30px;
+}
+
+.comment-input h3 {
+  margin-bottom: 10px;
+}
+
+.comment-input input {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+  border: none;
+  border-radius: 0.2rem;
+  width: calc(33% - 20px);
+  padding: 5px;
+  margin: 0 10px 10px;
+  color: var(--ifm-font-color-base);
+  text-shadow: 0 0 0.75px var(--ifm-color-gray-700);
+}
+
+.comment-input input::placeholder {
+  color: var(--shade-600);
+  text-shadow: 0 0 0.75px var(--shade-300);
+}
+
+.comment-input input:focus {
+  outline: 2px solid var(--ifm-color-primary);
+}
+
+.comment-input input.comment-author-warning {
+  outline: 2px dashed var(--ifm-color-danger) !important;
+}
+
+.comment-input .comment-edit-warning {
+  border: 3px 2px 2px 2px dashed var(--ifm-color-danger) !important;
+  -webkit-transition: border 2s linear;
+  transition: border 2s linear;
+}
+
+[data-theme="dark"] .comment-input input {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .comment-input input::placeholder {
+  color: var(--shade-400);
+}
+
+.comment-input button {
+  display: inline-block;
+  padding: 5px 5px;
+  margin: 5px 0 0 0;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.comment-input button.comment-cancel-reply {
+  color: var(--ifm-color-primary-lightest);
+  background-color: var(--ifm-background-surface-color);
+  border: var(--ifm-button-border-color);
+}
+
+.comment-input button.comment-cancel-reply .info-text {
+  font-size: 70%;
+}
+
+.comment-input > div {
+  font-family: var(--ifm-font-family-base);
+  color: var(--ifm-font-color-base);
+  text-shadow: 0 0 0.75px var(--ifm-color-gray-700);
+  border-color: var(--shade-300) !important;
+}
+
+[data-theme="dark"] .comment-input > div {
+  border-color: var(--shade-600) !important;
+  text-shadow: 0 0 0.75px var(--ifm-color-gray-300);
+}
+
+[data-theme="dark"] .comment-input > div > div:first-of-type {
+  background: var(--shade-800) !important;
+  color: var(--ifm-font-color-base);
+}

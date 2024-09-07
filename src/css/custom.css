@@ -6,8 +6,12 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-base: "Noto Serif SC",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  --ifm-font-family-monospace: "Courier Prime",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --ifm-font-family-base: "Noto Serif SC", system-ui, -apple-system, Segoe UI,
+    Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --ifm-font-family-monospace: "Courier Prime", SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
   --ifm-font-weight-light: 200;
   --ifm-font-weight-normal: 300;
   --ifm-font-weight-semibold: 500;
@@ -32,12 +36,12 @@
   --ifm-background-color: #e4e2d3;
   --ifm-background-surface-color: #f1f0e9;
   --ifm-code-background: #d6d3bd;
-  text-shadow: 0 0 .75px var(--ifm-color-gray-700);
+  text-shadow: 0 0 0.75px var(--ifm-color-gray-700);
   --ifm-blockquote-border-color: #c9c5a8;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #8bac55;
   --ifm-color-primary-dark: #7d9b4c;
   --ifm-color-primary-darker: #769348;
@@ -50,12 +54,12 @@
   --ifm-background-color: #211f15;
   --ifm-background-surface-color: #2e2c1b;
   --ifm-code-background: #14130c;
-  text-shadow: 0 0 .75px var(--ifm-color-gray-300);
+  text-shadow: 0 0 0.75px var(--ifm-color-gray-300);
   --ifm-blockquote-border-color: #3b3921;
 }
 
-[data-theme='light'] img[src$='#dark-mode-only'],
-[data-theme='dark'] img[src$='#light-mode-only'] {
+[data-theme="light"] img[src$="#dark-mode-only"],
+[data-theme="dark"] img[src$="#light-mode-only"] {
   display: none;
 }
 
@@ -72,20 +76,32 @@ article h6::before {
   font-size: 0.6em;
   margin-right: 0.3rem;
 }
-[data-theme='dark'] article h1::before,
-[data-theme='dark'] article h2::before,
-[data-theme='dark'] article h3::before,
-[data-theme='dark'] article h4::before,
-[data-theme='dark'] article h5::before,
-[data-theme='dark'] article h6::before {
+[data-theme="dark"] article h1::before,
+[data-theme="dark"] article h2::before,
+[data-theme="dark"] article h3::before,
+[data-theme="dark"] article h4::before,
+[data-theme="dark"] article h5::before,
+[data-theme="dark"] article h6::before {
   color: #2c2c2c80;
 }
-article h1::before { content: "H1"; }
-article h2::before { content: "H2"; }
-article h3::before { content: "H3"; }
-article h4::before { content: "H4"; }
-article h5::before { content: "H5"; }
-article h6::before { content: "H6"; }
+article h1::before {
+  content: "H1";
+}
+article h2::before {
+  content: "H2";
+}
+article h3::before {
+  content: "H3";
+}
+article h4::before {
+  content: "H4";
+}
+article h5::before {
+  content: "H5";
+}
+article h6::before {
+  content: "H6";
+}
 
 article header h1::before,
 article header h2::before,
@@ -103,7 +119,7 @@ blockquote {
 }
 
 blockquote::before {
-  content: '\201C';
+  content: "\201C";
   font-size: 4em;
   color: var(--ifm-blockquote-border-color);
   position: absolute;
@@ -121,4 +137,9 @@ blockquote p {
 
 html {
   background-image: url("/img/texture.png");
+}
+
+button,
+input {
+  font-family: var(--ifm-font-family-base);
 }
