@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogPostItem from '@theme-original/BlogPostItem';
-import {useBlogPost} from '@docusaurus/plugin-content-blog/client';
-import GiscusComponent from '../../components/GiscuzComponnet';
+import { useBlogPost } from '@docusaurus/plugin-content-blog/client';
+import CommentSection from '../../components/CommentSection';
 
 export default function BlogPostItemWrapper(props) {
   const {
@@ -13,8 +13,9 @@ export default function BlogPostItemWrapper(props) {
   return (
     <>
       <BlogPostItem {...props} />
+      <div className="margin-top--lg" />
       {(!disableComments && isBlogPostPage) && (
-        <GiscusComponent />
+        <CommentSection />
       )}
     </>
   );

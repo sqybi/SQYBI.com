@@ -1,7 +1,7 @@
 import Translate from '@docusaurus/Translate';
 import Layout from '@theme/Layout';
 import LinksHeader from '@site/src/components/LinksHeader';
-import GiscusComponent from '../../components/GiscuzComponnet';
+import CommentSection from '../../components/CommentSection';
 import './index.css';
 
 const links = [
@@ -136,7 +136,7 @@ export default function Links() {
                 <div class="container">
                     <div class="row margin-top--lg margin-bottom--lg">
                         <div class="col col--8 col--offset-2">
-                            <GiscusComponent />
+                            <CommentSection />
                         </div>
                     </div>
                 </div>
