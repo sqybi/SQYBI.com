@@ -67,7 +67,7 @@
   transition: opacity 0.3s ease-out;
 }
 
-.comment-list .comment-box:hover button {
+.comment-list .comment-box:hover .comment-profile button {
   opacity: 1;
 }
 
