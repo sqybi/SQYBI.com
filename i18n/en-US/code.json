@@ -496,5 +496,32 @@
   },
   "虽然不一定全部认同这个博客的观点，但是很喜欢它的行文方式和美术设计。": {
     "message": "Although I don't necessarily agree with all the viewpoints of this blog, I really like its writing style and artistic design."
+  },
+  "回复此评论": {
+    "message": "Reply"
+  },
+  "回复评论": {
+    "message": "Reply to Comment"
+  },
+  "发表评论": {
+    "message": "Post Comment"
+  },
+  "发表回复": {
+    "message": "Post Reply"
+  },
+  "取消回复评论": {
+    "message": "Cancel Reply"
+  },
+  "昵称（必需）": {
+    "message": "Nickname (required)"
+  },
+  "邮件地址": {
+    "message": "Email"
+  },
+  "个人主页": {
+    "message": "Homepage"
+  },
+  "如果有什么想聊的内容，但是又感到害羞，不如先试着发一次评论看看。": {
+    "message": "If there's something you'd like to talk about but feel shy, why not try posting a comment first?"
   }
 }

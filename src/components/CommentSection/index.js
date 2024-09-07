@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Editable, useEditor } from "@wysimark/react";
-import Translate from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 import { useLocation } from 'react-router-dom';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
@@ -45,7 +45,7 @@ const Comment = ({ comment, depth, onReply, locale }) => {
                                 onReply(comment.id);
                                 document.getElementById('comment-reply-area').scrollIntoView({ behavior: 'smooth' });
                             }}>
-                            回复此评论
+                            <Translate>回复此评论</Translate>
                         </button>
                         :
                         null
@@ -179,7 +179,7 @@ const CommentSection = ({ }) => {
                 <h3>{replyTo ? <Translate>回复评论</Translate> : <Translate>发表评论</Translate>}</h3>
                 <input
                     type="text"
-                    placeholder="昵称（必需）"
+                    placeholder={translate({ message: "昵称（必需）" })}
                     className={missingAuthorWarning ? styles['comment-author-warning'] : ''}
                     value={author}
                     onChange={(e) => {
@@ -188,13 +188,13 @@ const CommentSection = ({ }) => {
                 />
                 <input
                     type="email"
-                    placeholder="邮件地址"
+                    placeholder={translate({ message: "邮件地址" })}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                     type="url"
-                    placeholder="个人主页"
+                    placeholder={translate({ message: "个人主页" })}
                     value={website}
                     onChange={(e) => setWebsite(e.target.value)}
                 />
@@ -204,19 +204,19 @@ const CommentSection = ({ }) => {
                     editor={editor}
                     value={markdown}
                     throttleInMs={100}
-                    placeholder="如果有什么想聊的内容，但是又感到害羞，不如先试着发一次评论看看。"
+                    placeholder={translate({ message: "如果有什么想聊的内容，但是又感到害羞，不如先试着发一次评论看看。" })}
                     onChange={(e) => {
                         setMarkdown(e);
                     }} />
 
                 <button className="button button--primary button--block" onClick={handlePostComment} disabled={sendButtonDisabled}>
-                    {replyTo ? '发表回复' : '发表评论'}
+                    {replyTo ? <Translate>发表回复</Translate> : <Translate>发表评论</Translate>}
                 </button>
                 {replyTo &&
                     <button
                         className={"button button--secondary button--block " + styles['comment-cancel-reply']}
                         onClick={() => setReplyTo(null)}>
-                        取消回复评论<br />
+                        <Translate>取消回复评论</Translate><br />
                         <span className={styles['info-text']}>{replyTo.author} @ {getLocaleDateString(replyTo.comment_timestamp_ms, i18n.currentLocale)}</span>
                     </button>
                 }
