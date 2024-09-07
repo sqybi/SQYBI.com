@@ -40,7 +40,7 @@ const Comment = ({ comment, depth, onReply, locale }) => {
                 {
                     depth < 4 ?
                         <button
-                            class="button button--primary"
+                            className="button button--primary"
                             onClick={() => {
                                 onReply(comment.id);
                                 document.getElementById('comment-reply-area').scrollIntoView({ behavior: 'smooth' });
@@ -155,11 +155,9 @@ const CommentSection = ({ }) => {
             };
             await axios.post(COMMENT_SERVICE_URL, newComment);
             fetchComments();
-            setAuthor('');
-            setEmail('');
-            setWebsite('');
             editor.setMarkdown('');
             setReplyTo(null);
+            setMissingEditWarning(false);
         } catch (error) {
             console.error('Error posting comment:', error);
         }
