@@ -129,7 +129,7 @@ I also took care in designing the email's color scheme and CSS, hoping recipient
 
 ![Email Template](./assets/email-template.webp)
 
-Due to time constraints, currently, all email content except comments is in English. I plan to add i18n support for emails later. For more on i18n, see [Adding i18n for a Docusaurus Site: The Right Way to Open LLM](https://sqybi.com/blog/adding-i18n-for-a-docusaurus-site/). Technically, it’s doable, but the changes needed are significant.
+Due to time constraints, currently, all email content except comments is in English. I plan to add i18n support for emails later. For more on i18n, see [Adding i18n for a Docusaurus Site: The Correct Way to Launch LLM](https://sqybi.com/blog/adding-i18n-for-a-docusaurus-site/). Technically, it’s doable, but the changes needed are significant.
 
 **Once again, I strongly recommend filling in your email when commenting because being able to receive emails when someone comments on you is quite crucial.**
 
@@ -180,7 +180,7 @@ Speaking of industry developments, the iteration of CSS selectors has played a s
 
 ### i18n Adaptation
 
-Finally, as a site that supports i18n (reminder: for those unfamiliar, see [Adding i18n for a Docusaurus Site: The Right Way to Open LLM](https://sqybi.com/blog/adding-i18n-for-a-docusaurus-site/)), this comment functionality also includes i18n adaptation. You can switch the language from the dropdown in the top right corner and see the effect by switching to English.
+Finally, as a site that supports i18n (reminder: for those unfamiliar, see [Adding i18n for a Docusaurus Site: The Correct Way to Launch LLM](https://sqybi.com/blog/adding-i18n-for-a-docusaurus-site/)), this comment functionality also includes i18n adaptation. You can switch the language from the dropdown in the top right corner and see the effect by switching to English.
 
 During this process, I discovered a new trick I hadn’t known before. Previously, I only used Docusaurus's `<Translate>` to configure multiple languages. Recently, I discovered an accompanying `translate()` function can be used for component attributes that can’t utilize DOM elements. Some previous pages may have missed translations due to this, and I’ll fill them in later if found.
 
@@ -268,8 +268,81 @@ Another issue encountered: importing stylesheets via `import styles from './inde
 
 However, when re-implementing the post-comment animation, `@keyframes` worked. Perhaps there was an error in the original code, but since it’s deleted, it may remain a mystery.
 
-#### Using dotenv to Load Local Configs
+#### Loading Local Configuration via dotenv
 
-Cloudflare can directly integrate Docusaurus deployment, with the entire build process occurring in the cloud by merely uploading code to GitHub.
+Cloudflare can directly integrate with Docusaurus for deployment. The entire compilation process occurs in the cloud, and you only need to upload the code to GitHub.
 
-In this process, Cloudflare can configure some build-time environment variables. Docusaurus allows loading these into `siteConfig` via `process.env` in `docusaurus.config.js`, then calling where needed as below:
+During this process, Cloudflare can also configure some environment variables for the compilation. Docusaurus supports loading these environment variables into `siteConfig` in `docusaurus.config.js` via `process.env` and calling them when needed using the following method:
+
+```javascript
+const {
+  siteConfig: { customFields },
+} = useDocusaurusContext();
+```
+
+However, when starting the local dev environment, these environment variables do not exist. At this point, you need to install the `dotenv-cli` package:
+
+```bash
+npm install --save-dev dotenv-cli
+```
+
+Then, write a `.env` file in the root directory to store the environment variables and modify `package.json` to include the `dotenv` command when starting the local environment:
+
+```json
+"scripts": {
+    "docusaurus": "dotenv docusaurus",
+    "start": "dotenv docusaurus start",
+    "build": "dotenv docusaurus build",
+    // ...
+},
+```
+
+Of course, some local Node scripts can also use this method. For example, my local script for calling ChatGPT to perform i18n translation is also started using dotenv.
+
+## Other Changes
+
+In addition to the comment system itself, there are also some other minor changes that have been included. Here is a brief introduction to them.
+
+### Adjusting Font Loading
+
+After configuring web fonts, it is common for the page to initially display the default font and then suddenly switch to the correct web font after a while.
+
+This is actually controlled by `font-display` in the CSS file of the font configuration. I have changed the previous `font-display: swap` to `font-display: fallback`, which should improve the visual experience.
+
+For details on this configuration, I won't elaborate here. You can refer to the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display).
+
+## Possible Future Improvements
+
+### Importing Giscus Historical Comments
+
+In the future, I might find some time to import previous historical comments, as some articles had quite a few comments.
+
+This does not affect new comments, so there is no need to worry about that.
+
+### Providing a URL for Each Comment
+
+This feature is not too complex, but a more complex underlying feature is to add a link in the email that can jump to the specific comment.
+
+The email jump feature involves changes to the database and i18n adaptation, so this version does not include this feature. It will be implemented together in a future version.
+
+### Supporting Emoji Reactions for Articles
+
+This is actually a feature previously provided by Giscus, and it seems quite interesting.
+
+However, recently, not many people have been using this feature, so its priority is not very high.
+
+### Previously Mentioned Improvements
+
+Some improvements have already been mentioned in previous articles:
+
+- Supporting i18n in email content.
+- Display issues of blockquote in the editor.
+- Displaying which comment is being replied to more clearly.
+- Not losing the comment content being edited when refreshing the page.
+- Adapting to mobile display.
+
+## In Conclusion
+
+Actually, I've written everything I wanted to write, and there's nothing more to add.
+
+You've read this far, why not try leaving a comment!
