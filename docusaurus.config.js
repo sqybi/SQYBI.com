@@ -259,6 +259,7 @@ const config = {
   customFields: {
     giscusRepoId: process.env.GISCUS_REPO_ID,
     giscusCategoryId: process.env.GISCUS_CATEGORY_ID,
+    commentServiceUrl: process.env.COMMENT_SERVICE_URL,
   },
 
   headTags: [

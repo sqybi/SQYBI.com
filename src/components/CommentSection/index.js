@@ -7,7 +7,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 import styles from './index.module.css';
 
-const COMMENT_SERVICE_URL = "https://blog-comment-service.sqybi.com/comment";
 const LOCAL_STORAGE_AUTHOR_KEY = 'sqybi_com_comment_author';
 const LOCAL_STORAGE_EMAIL_KEY = 'sqybi_com_comment_email';
 const LOCAL_STORAGE_WEBSITE_KEY = 'sqybi_com_comment_website';
@@ -66,9 +65,14 @@ const CommentSection = ({ }) => {
     const [articleId, setArticleId] = useState('');
     const [missingAuthorWarning, setMissingAuthorWarning] = useState(false);
     const [sendButtonDisabled, setSendButtonDisabled] = useState(true);
+    const [posting, setPosting] = useState(false);
+    const [loading, setLoading] = useState(false);
     const editor = useEditor({});
     const location = useLocation();
-    const { i18n } = useDocusaurusContext();
+    const {
+        siteConfig: { customFields },
+        i18n: { currentLocale },
+    } = useDocusaurusContext();
 
     useEffect(() => {
         const storedAuthor = localStorage.getItem(LOCAL_STORAGE_AUTHOR_KEY);
@@ -91,7 +95,7 @@ const CommentSection = ({ }) => {
     }, [location.pathname]);
 
     useEffect(() => {
-        fetchComments();
+        fetchComments().then();
     }, [articleId]);
 
     useEffect(() => {
@@ -111,9 +115,17 @@ const CommentSection = ({ }) => {
         setSendButtonDisabled(!author || !markdown);
     }, [author, markdown]);
 
+    useEffect(() => {
+        setLoading(false);
+    }, [comments]);
+
     const fetchComments = async () => {
+        if (loading) {
+            console.warn('Loading comments while previous request is still pending.');
+        }
         try {
-            axios.get(COMMENT_SERVICE_URL, {
+            setLoading(true);
+            axios.get(customFields.commentServiceUrl, {
                 params: {
                     comment_base_type: 'article',
                     comment_base_id: articleId,
@@ -123,6 +135,7 @@ const CommentSection = ({ }) => {
                 setComments(sortAndNestComments(response.data));
             });
         } catch (error) {
+            setLoading(false);
             console.error('Error fetching comments:', error);
         }
     }
@@ -143,6 +156,7 @@ const CommentSection = ({ }) => {
 
     const handlePostComment = async () => {
         try {
+            setPosting(true);
             if (!author || !markdown) {
                 setMissingAuthorWarning(!author);
                 setSendButtonDisabled(!author || !markdown);
@@ -157,13 +171,15 @@ const CommentSection = ({ }) => {
                 content: markdown,
                 timestamp_ms: Date.now(),
             };
-            await axios.post(COMMENT_SERVICE_URL, newComment);
+            await axios.post(customFields.commentServiceUrl, newComment);
             fetchComments();
             editor.setMarkdown('');
             setReplyTo(null);
             setSendButtonDisabled(true);
         } catch (error) {
             console.error('Error posting comment:', error);
+        } finally {
+            setPosting(false);
         }
     };
 
@@ -172,8 +188,11 @@ const CommentSection = ({ }) => {
             <hr className={styles['comment-divider']} />
             <div className={styles['comment-list']}>
                 {comments.map(comment => (
-                    <Comment key={comment.id} comment={comment} depth={comment.depth} locale={i18n.currentLocale} onReply={(e) => setReplyTo(comment)} />
+                    <Comment key={comment.id} comment={comment} depth={comment.depth} locale={currentLocale} onReply={(e) => setReplyTo(comment)} />
                 ))}
+            </div>
+            <div className={styles['comment-loading-container']}>
+                <div className={loading ? styles['comment-loading'] : ''}></div>
             </div>
             <div id='comment-reply-area' className={styles["comment-input"]}>
                 <h3>{replyTo ? <Translate>回复评论</Translate> : <Translate>发表评论</Translate>}</h3>
@@ -209,7 +228,10 @@ const CommentSection = ({ }) => {
                         setMarkdown(e);
                     }} />
 
-                <button className="button button--primary button--block" onClick={handlePostComment} disabled={sendButtonDisabled}>
+                <button
+                    className={posting ? "button button--primary button--block " + styles['comment-posting'] : "button button--primary button--block"}
+                    onClick={handlePostComment}
+                    disabled={sendButtonDisabled || posting}>
                     {replyTo ? <Translate>发表回复</Translate> : <Translate>发表评论</Translate>}
                 </button>
                 {replyTo &&
@@ -217,11 +239,11 @@ const CommentSection = ({ }) => {
                         className={"button button--secondary button--block " + styles['comment-cancel-reply']}
                         onClick={() => setReplyTo(null)}>
                         <Translate>取消回复评论</Translate><br />
-                        <span className={styles['info-text']}>{replyTo.author} @ {getLocaleDateString(replyTo.comment_timestamp_ms, i18n.currentLocale)}</span>
+                        <span className={styles['info-text']}>{replyTo.author} @ {getLocaleDateString(replyTo.comment_timestamp_ms, currentLocale)}</span>
                     </button>
                 }
             </div>
-        </div>
+        </div >
     );
 };
 

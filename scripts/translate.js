@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
 const OpenAI = require('openai');
-const { Console } = require('console');
 const { exit } = require('process');
 
 const sourceLang = 'zh-Hans';
