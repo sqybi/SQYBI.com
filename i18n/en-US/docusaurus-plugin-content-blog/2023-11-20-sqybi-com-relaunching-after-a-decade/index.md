@@ -79,7 +79,7 @@ But it was at this time, around 2006, that Twitter emerged and slowly rose to fa
 
 :::note[The forgotten Fanfou]
 
-Surprisingly, Fanfou is still operating to this day. This is [my Fanfou profile](https://fanfou.com/), though I hardly use it now.
+Surprisingly, Fanfou is still operating to this day. This is [my Fanfou profile](https://fanfou.com/sqybi), though I hardly use it now.
 
 :::
 
