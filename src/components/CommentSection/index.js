@@ -169,7 +169,6 @@ const CommentSection = ({ }) => {
                 email,
                 website,
                 content: markdown,
-                timestamp_ms: Date.now(),
             };
             await axios.post(customFields.commentServiceUrl, newComment);
             fetchComments();
