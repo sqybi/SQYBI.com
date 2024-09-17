@@ -145,6 +145,8 @@ const CommentSection = ({ }) => {
         const nestedComments = [];
 
         for (const comment of sortedComments) {
+            fixCommentWebsiteLink(comment);
+
             comment.depth = depth;
             nestedComments.push(comment);
             const childrenComments = sortAndNestComments(comment.children, depth + 1);
@@ -153,6 +155,15 @@ const CommentSection = ({ }) => {
 
         return nestedComments;
     };
+
+    const fixCommentWebsiteLink = (comment) => {
+        if (!comment.website) return;
+        if (comment.website.startsWith('http://') && comment.website.startsWith('https://')) return;
+        if (comment.website.includes("://")) {
+            comment.website = comment.website.split("://")[1];
+        }
+        comment.website = "http://" + comment.website;
+    }
 
     const handlePostComment = async () => {
         try {
@@ -164,6 +175,7 @@ const CommentSection = ({ }) => {
             }
             const newComment = {
                 article_id: articleId,
+                article_original_url: window.location.href,
                 parent_comment_id: replyTo ? replyTo.id : undefined,
                 author,
                 email,
