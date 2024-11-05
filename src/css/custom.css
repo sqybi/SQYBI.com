@@ -143,3 +143,24 @@ button,
 input {
   font-family: var(--ifm-font-family-base);
 }
+
+@supports selector(::-webkit-scrollbar) {
+  body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--ifm-color-primary-rgb), 0.7);
+    background-clip: content-box;
+    border-radius: 4px;
+  }
+}
+
+@supports (scrollbar-color: auto) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(var(--ifm-color-primary-rgb), 0.7) transparent;
+  }
+}
