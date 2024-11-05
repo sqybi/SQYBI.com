@@ -75,6 +75,7 @@ const config = {
           feedOptions: {
             xslt: true,
             type: 'all',
+            description: 'feedId:61968779590452224+userId:70060187581608960',
             copyright: `Copyright © 2023-${new Date().getFullYear()} SQYBI.com.`,
             createFeedItems: async (params) => {
               const { blogPosts, defaultCreateFeedItems, ...rest } = params;
@@ -271,6 +272,10 @@ const config = {
       },
     }
   ],
+
+  future: {
+    experimental_faster: true,
+  },
 };
 
 export default config;
