@@ -75,6 +75,7 @@ const config = {
           feedOptions: {
             xslt: true,
             type: 'all',
+            description: 'Change is a part of life and takes part in finding us who we are.',
             copyright: `Copyright © 2023-${new Date().getFullYear()} SQYBI.com.`,
             createFeedItems: async (params) => {
               const { blogPosts, defaultCreateFeedItems, ...rest } = params;
