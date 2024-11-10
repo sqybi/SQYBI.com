@@ -58,7 +58,7 @@ const FeatureList = [
           <a href="mailto:sqybi@126.com"><Translate>✉️ Email: sqybi@126.com</Translate></a><br />
         </p>
         <p>
-          <Translate>希望了解更多关于我的信息，可以查阅以下页面：</Translate><br/>
+          <Translate>希望了解更多关于我的信息，可以查阅以下页面：</Translate><br />
           <a href="/about/"><Translate>十几个为什么</Translate></a>
         </p>
       </>
@@ -71,7 +71,7 @@ function Feature({ title, description }) {
     <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
-        <p className="text--left">{description}</p>
+        <div className="text--left">{description}</div>
       </div>
     </div>
   );

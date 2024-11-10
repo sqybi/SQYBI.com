@@ -88,8 +88,12 @@ const config = {
           },
           blogSidebarTitle: '近期文章',
           blogSidebarCount: 20,
-          remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          remarkPlugins: [
+            remarkMath,
+          ],
+          rehypePlugins: [
+            rehypeKatex,
+          ],
           onInlineTags: 'throw',
           onUntruncatedBlogPosts: 'warn',
         },
@@ -244,7 +248,7 @@ const config = {
   ],
 
   scripts: [
-    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js',
   ],
 
   stylesheets: [
