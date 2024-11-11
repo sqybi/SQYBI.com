@@ -7,6 +7,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import imgWrapper from './plugins/rehype/imgWrapper';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -93,6 +94,7 @@ const config = {
           ],
           rehypePlugins: [
             rehypeKatex,
+            imgWrapper,
           ],
           onInlineTags: 'throw',
           onUntruncatedBlogPosts: 'warn',
@@ -245,10 +247,23 @@ const config = {
       },
     ],
     './plugins/blog-list',
+    './plugins/inject-tags',
   ],
 
   scripts: [
-    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js',
+    {
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js',
+      async: true,
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js',
+      async: true,
+    },
+    {
+      src: 'https://cloud.umami.is/script.js',
+      'data-website-id': 'a7ce7043-3c90-4cde-89f9-d8eeff1dcec8',
+      defer: true,
+    },
   ],
 
   stylesheets: [
@@ -259,6 +274,10 @@ const config = {
         'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
       crossorigin: 'anonymous',
     },
+    {
+      href: 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/style.min.css',
+      type: 'text/css',
+    }
   ],
 
   customFields: {
