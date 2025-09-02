@@ -70,8 +70,8 @@ const config = {
         docs: false,
         blog: {
           showReadingTime: true,
-          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
-            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
+          readingTime: ({ content, locale, frontMatter, defaultReadingTime }) =>
+            defaultReadingTime({ content, locale, options: { wordsPerMinute: 300 } }),
           postsPerPage: 10,
           feedOptions: {
             xslt: true,
@@ -298,6 +298,7 @@ const config = {
 
   future: {
     experimental_faster: true,
+    v4: true
   },
 };
 

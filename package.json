@@ -18,11 +18,12 @@
     "download-fonts": "dotenv node scripts/download_fonts.js"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.7.0",
-    "@docusaurus/faster": "^3.7.0",
-    "@docusaurus/plugin-ideal-image": "^3.7.0",
-    "@docusaurus/preset-classic": "^3.7.0",
-    "@docusaurus/theme-mermaid": "^3.7.0",
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/faster": "^3.8.1",
+    "@docusaurus/plugin-ideal-image": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
+    "@docusaurus/theme-classic": "^3.8.1",
+    "@docusaurus/theme-mermaid": "^3.8.1",
     "@mdx-js/react": "^3.1.0",
     "@wysimark/react": "^3.0.20",
     "axios": "^1.10.0",
@@ -39,7 +40,7 @@
     "@docusaurus/module-type-aliases": "^3.7.0",
     "@docusaurus/types": "^3.7.0",
     "dotenv-cli": "^7.4.2",
-    "wrangler": "^4.13.1"
+    "wrangler": "^4.33.1"
   },
   "browserslist": {
     "production": [
