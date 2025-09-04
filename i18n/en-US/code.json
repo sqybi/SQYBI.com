@@ -500,6 +500,9 @@
   "回复此评论": {
     "message": "Reply"
   },
+  "正在回复此评论": {
+    "message": "Replying to..."
+  },
   "回复评论": {
     "message": "Reply to Comment"
   },
@@ -521,7 +524,7 @@
   "个人主页": {
     "message": "Homepage"
   },
-  "如果有什么想聊的内容，但是又感到害羞，不如先试着发一次评论看看。": {
-    "message": "If there's something you'd like to talk about but feel shy, why not try posting a comment first?"
+  "不如先试着发一次评论看看 :D": {
+    "message": "Just try posting a comment first :D"
   }
 }
