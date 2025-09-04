@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import Translate, { translate } from '@docusaurus/Translate';
 import { useLocation } from 'react-router-dom';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Crepe } from "@milkdown/crepe";
-import { Milkdown, MilkdownProvider, useEditor } from "@milkdown/react";
+import { Crepe } from '@milkdown/crepe';
+import { Milkdown, MilkdownProvider, useEditor } from '@milkdown/react';
+import { replaceAll } from '@milkdown/kit/utils';
 
 import styles from './index.module.css';
 
@@ -57,12 +58,14 @@ const Comment = ({ comment, depth, onReply, isReplying, locale }) => {
 };
 
 const CrepeEditor = ({ value, onChange, placeholder }) => {
+    const lastExternalValue = useRef(value);
+
     useEffect(() => {
         // Dynamically import CSS. Imports at the beginning will not work.
         import("@milkdown/crepe/theme/common/style.css");
     }, []);
 
-    useEditor((root) => {
+    const res = useEditor((root) => {
         const crepe = new Crepe({
             root,
             defaultValue: value,
@@ -78,7 +81,8 @@ const CrepeEditor = ({ value, onChange, placeholder }) => {
         });
 
         crepe.on((listener) => {
-            listener.markdownUpdated((ctx, markdown, prevMarkdown) => {
+            listener.markdownUpdated((ctx, markdown) => {
+                lastExternalValue.current = markdown;
                 onChange && onChange(markdown);
             });
         });
@@ -86,10 +90,15 @@ const CrepeEditor = ({ value, onChange, placeholder }) => {
         return crepe;
     }, []);
 
+    useEffect(() => {
+        if (res && res.get() && value !== lastExternalValue.current) {
+            res.get().action(replaceAll(value));
+            lastExternalValue.current = value;
+        }
+    }, [value]);
+
     return (
-        <>
-            <Milkdown />
-        </>
+        <Milkdown />
     );
 };
 
@@ -236,7 +245,7 @@ const CommentSection = ({ }) => {
             <hr className={styles['comment-divider']} />
             <div className={styles['comment-list']}>
                 {comments.map(comment => (
-                    <Comment key={comment.id} comment={comment} depth={comment.depth} locale={currentLocale} onReply={(e) => setReplyTo(comment)} isReplying={replyTo === comment} />
+                    <Comment key={comment.id} comment={comment} depth={comment.depth} locale={currentLocale} onReply={() => setReplyTo(comment)} isReplying={replyTo === comment} />
                 ))}
             </div>
             <div className={styles['comment-loading-container']}>
