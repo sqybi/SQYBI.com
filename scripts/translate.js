@@ -7,14 +7,20 @@ const { exit } = require('process');
 const sourceLang = 'zh-Hans';
 const targetLangs = ['en-US'];
 
+const modelBaseUrl = process.env.OPENAI_BASE_URL;
+const modelKey = process.env.OPENAI_API_KEY;
+const modelName = process.env.OPENAI_MODEL;
+const modelHumanReadableName = process.env.OPENAI_MODEL_HUMAN_READABLE_NAME || process.env.OPENAI_MODEL;
+
 let skipAll = false;
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    baseURL: modelBaseUrl,
+    apiKey: modelKey,
 });
 
 const translate = async (content, targetLang) => {
-    console.log(`Translating to ${targetLang} by ChatGPT, it may take a lot of time if the article is long...`);
+    console.log(`Translating to ${targetLang} via ${modelHumanReadableName} (${modelName}), it may take a lot of time if the article is long...`);
     const stream = await openai.chat.completions.create({
         messages: [
             {
@@ -32,7 +38,7 @@ const translate = async (content, targetLang) => {
             },
             { role: 'user', content: content }
         ],
-        model: 'gpt-4o',
+        model: modelName,
         stream: true,
     });
 
@@ -40,9 +46,9 @@ const translate = async (content, targetLang) => {
     for await (const chunk of stream) {
         const chunkData = chunk.choices[0]?.delta?.content || '';
         result += chunkData;
-        console.log(`ChatGPT responding, length ${chunkData.length} / ${result.length}...`);
+        console.log(`${modelHumanReadableName} responding, length ${chunkData.length} / ${result.length}...`);
     }
-    console.log(`ChatGPT response finished, total length ${result.length}.`);
+    console.log(`${modelHumanReadableName} response finished, total length ${result.length}.`);
 
     return result;
 };
@@ -84,7 +90,7 @@ const translateFile = async (filePath, targetLang, type) => {
         if (!skipAll) {
             // Ask user on console if they want to translate again
             console.log(`This article was translated at ${lastTranslatedTime.format('YYYY-MM-DD HH:mm:ss')}.`);
-            console.log('Do you want to translate again? (y/n/a)');
+            console.log('Do you want to translate again? Yes / No / Skip All (y/n/a)');
             const answer = await new Promise((resolve) => {
                 process.stdin.once('data', (data) => {
                     resolve(data.toString().trim());
@@ -109,7 +115,7 @@ const translateFile = async (filePath, targetLang, type) => {
     const translatedMainContent = await translate(mainContent, targetLang);
     const translatedFullContent =
         `---\n${frontmatter}last_translated_at: ${moment().toISOString()}\n---\n\n`
-        + ':::info[Translation Tool]\n\nThis article was translated by ChatGPT automatically, with minor manual corrections.\n\n:::\n\n'
+        + `:::info[Translation Tool]\n\nThis article was translated via ${modelHumanReadableName} automatically, with minor manual corrections.\n\n:::\n\n`
         + translatedMainContent;
 
     fs.writeFileSync(translationPath, translatedFullContent);
