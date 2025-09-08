@@ -213,10 +213,11 @@ article > div img {
 
 /* Milkdown Crepe configs */
 
-.milkdown {
+body .milkdown {
   border: 2px solid rgba(var(--ifm-color-primary-rgb), 0.7);
   border-radius: 0.2rem;
   margin: 10px;
+  font-family: var(--ifm-font-family-base) !important;
 }
 
 .milkdown {
