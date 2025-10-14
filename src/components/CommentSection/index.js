@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import { Editable, useEditor } from "@wysimark/react";
 import Translate, { translate } from '@docusaurus/Translate';
 import { useLocation } from 'react-router-dom';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { Crepe } from '@milkdown/crepe';
+import { Milkdown, MilkdownProvider, useEditor } from '@milkdown/react';
+import { replaceAll } from '@milkdown/kit/utils';
 
 import styles from './index.module.css';
 
@@ -16,7 +18,7 @@ const getLocaleDateString = (timestamp, locale) => {
         locale ?? 'en-US', { dateStyle: 'long', timeStyle: 'medium' })
 };
 
-const Comment = ({ comment, depth, onReply, locale }) => {
+const Comment = ({ comment, depth, onReply, isReplying, locale }) => {
     const getGravatarUrl = (email, author, size = 50) => {
         const trimmedEmail = email ? email.trim().toLowerCase() : author.trim();
         // Use global script in Docusaurus settings to load CryptoJS
@@ -39,12 +41,12 @@ const Comment = ({ comment, depth, onReply, locale }) => {
                 {
                     depth < 4 ?
                         <button
-                            className="button button--primary"
+                            className={isReplying ? "button disabled button--secondary" : "button button--primary"}
                             onClick={() => {
                                 onReply(comment.id);
                                 document.getElementById('comment-reply-area').scrollIntoView({ behavior: 'smooth' });
-                            }}>
-                            <Translate>回复此评论</Translate>
+                            }} disabled={isReplying}>
+                            {isReplying ? <Translate>正在回复此评论</Translate> : <Translate>回复此评论</Translate>}
                         </button>
                         :
                         null
@@ -52,6 +54,51 @@ const Comment = ({ comment, depth, onReply, locale }) => {
             </div>
             <div className={styles['comment-content']} dangerouslySetInnerHTML={{ __html: comment.content }} />
         </div>
+    );
+};
+
+const CrepeEditor = ({ value, onChange, placeholder }) => {
+    const lastExternalValue = useRef(value);
+
+    useEffect(() => {
+        // Dynamically import CSS. Imports at the beginning will not work.
+        import("@milkdown/crepe/theme/common/style.css");
+    }, []);
+
+    const res = useEditor((root) => {
+        const crepe = new Crepe({
+            root,
+            defaultValue: value,
+            features: {
+                [Crepe.Feature.BlockEdit]: false,
+                [Crepe.Feature.ImageBlock]: false,
+            },
+            featureConfigs: {
+                [Crepe.Feature.Placeholder]: {
+                    text: placeholder,
+                },
+            }
+        });
+
+        crepe.on((listener) => {
+            listener.markdownUpdated((ctx, markdown) => {
+                lastExternalValue.current = markdown;
+                onChange && onChange(markdown);
+            });
+        });
+
+        return crepe;
+    }, []);
+
+    useEffect(() => {
+        if (res && res.get() && value !== lastExternalValue.current) {
+            res.get().action(replaceAll(value));
+            lastExternalValue.current = value;
+        }
+    }, [value]);
+
+    return (
+        <Milkdown />
     );
 };
 
@@ -67,7 +114,6 @@ const CommentSection = ({ }) => {
     const [sendButtonDisabled, setSendButtonDisabled] = useState(true);
     const [posting, setPosting] = useState(false);
     const [loading, setLoading] = useState(false);
-    const editor = useEditor({});
     const location = useLocation();
     const {
         siteConfig: { customFields },
@@ -184,7 +230,7 @@ const CommentSection = ({ }) => {
             };
             await axios.post(customFields.commentServiceUrl, newComment);
             fetchComments();
-            editor.setMarkdown('');
+            setMarkdown('');
             setReplyTo(null);
             setSendButtonDisabled(true);
         } catch (error) {
@@ -199,7 +245,7 @@ const CommentSection = ({ }) => {
             <hr className={styles['comment-divider']} />
             <div className={styles['comment-list']}>
                 {comments.map(comment => (
-                    <Comment key={comment.id} comment={comment} depth={comment.depth} locale={currentLocale} onReply={(e) => setReplyTo(comment)} />
+                    <Comment key={comment.id} comment={comment} depth={comment.depth} locale={currentLocale} onReply={() => setReplyTo(comment)} isReplying={replyTo === comment} />
                 ))}
             </div>
             <div className={styles['comment-loading-container']}>
@@ -229,15 +275,13 @@ const CommentSection = ({ }) => {
                     onChange={(e) => setWebsite(e.target.value)}
                 />
 
-                <Editable
-                    className={styles['comment-edit']}
-                    editor={editor}
-                    value={markdown}
-                    throttleInMs={100}
-                    placeholder={translate({ message: "如果有什么想聊的内容，但是又感到害羞，不如先试着发一次评论看看。" })}
-                    onChange={(e) => {
-                        setMarkdown(e);
-                    }} />
+                <MilkdownProvider>
+                    <CrepeEditor
+                        value={markdown}
+                        onChange={setMarkdown}
+                        placeholder={translate({ message: "不如先试着发一次评论看看 :D" })}
+                    />
+                </MilkdownProvider>
 
                 <button
                     className={posting ? "button button--primary button--block " + styles['comment-posting'] : "button button--primary button--block"}

@@ -1,0 +1,228 @@
+---
+slug: things-you-didnt-know-about-quote-0-before-buying
+title: 关于 Quote/0 的那些你在购买前还不知道的特性
+authors: [sqybi]
+date: 2025-09-07T01:00
+tags: [technology]
+keywords: [Quote0, Quote/0, 墨水屏, ESP, 嵌入式]
+unlisted: false
+hide_table_of_contents: false
+toc_min_heading_level: 2
+toc_max_heading_level: 4
+last_translated_at: 2025-09-06T18:15:08.050Z
+---
+
+:::info[Translation Tool]
+
+This article was translated via ChatGPT 4.1 automatically, with minor manual corrections.
+
+:::
+
+(There's a little surprise at the end!)
+
+About one or two years ago, after working on an Arduino-based air conditioner temperature PID controller and writing some simple rapid-fire scripts for the Titan2 gamepad converter, I hadn’t touched embedded devices for quite a while.
+
+Recently, I saw a new product called Quote/0 on 少数派 (SSPAI) and decided to buy one to play with. Before placing my order, I wanted to check out user reviews and get some details about the device’s features. However, whether it was the official documentation or user reviews across different platforms, there were still many parameters and details missing, especially in terms of hardware and software experience.
+
+So I thought—at a price of just over a hundred RMB, even if it turned out to be a miss, it wasn’t costly. And if nothing else, I could write an article (which is the one you’re reading now) sharing the info I couldn’t find before buying—for the reference of others considering this device. With that in mind, I happily placed the order.
+
+This article will discuss some features I was curious about before buying but couldn’t find documented elsewhere, focusing mainly on the product’s functionality and user experience, especially some explanations about its API handling and refresh mechanisms that just don’t seem to be available online. I won’t evaluate the device’s target audience, competing products, or its commercial value, nor will I give an overall verdict—each section will just cover the facts at hand.
+
+<!-- truncate -->
+
+## What is Quote/0
+
+I won’t spend too many words here explaining the product—let me quote the official description directly:
+
+> Quote/0 features a highly flexible information configuration system, supporting modules like **Excerpts**, **RSS**, **Weather**, **To-dos**, etc., letting you display content continuously on this **unobtrusive e-ink screen**.
+> No need to wake up your phone—important information is **just a glance away**, helping you stay focused and avoid information overload. No need to install apps; you can still use NFC to launch an **iOS Quick App** or view details on the web, or use **Shortcuts**.
+> With a single charge, **battery life can reach one year**, truly providing quiet and lasting companionship.
+
+## Hardware and Appearance
+
+### Component Breakdown
+
+First, thanks to Zhihu user @元可可 YoCoco for the teardown post [透视 Quote/0](https://zhuanlan.zhihu.com/p/1938764983941968757), which was by far the most useful article I could find.
+
+From the teardown, the basic component breakdown for Quote/0 is as follows:
+
+- ESPC3-20 chip—a cheap chip with Wi-Fi and Bluetooth, as you’d expect, nothing too powerful
+- An e-ink screen under 3 inches; my measurements: about 6cm x 3cm
+- An 800mAh battery
+- A circuit board with an NFC coil
+- A plastic shell
+- A flexible magnet
+
+Although I’m not that familiar with embedded hardware, a quick search on Taobao shows that this hardware setup falls within the sub-100 RMB cost range.
+
+On that basis, the profit margin for this product may not be extremely high (since server and dev costs still exist), but if you have DIY skills and want a similar technical setup, it’s clear that this product isn’t cost-effective. However, if you lack the technical know-how, DIY skills, or equipment, then the price isn’t unreasonable. For example, without a 3D printer at home, cobbling together an enclosure after buying a bunch of kits seems like a real hassle.
+
+### Magnetic Back, But Weak Adsorption
+
+There’s a flexible magnet on the back of the Quote/0 to let you stick it to metal surfaces.
+
+However, in actual use, I clearly felt that the magnet wasn’t particularly strong. It sticks securely to totally flat, painted iron bookshelves; but on metal objects with curves or gaps—like my home’s radiator—the magnet just won’t hold at all.
+
+I chose to test on the radiator because there aren’t any really good metal surfaces near my desk, but there’s a conveniently located radiator. If I wanted to see the screen while sitting at my desk, the radiator would be the best spot—unfortunately, unless I add another magnet, that’s not possible.
+
+Plus, there’s another reason I wanted to stick it on the radiator: Quote/0, which is clearly a desk accessory, comes with no magnetic or adhesive desktop stand of any kind. And if you want to stick it to a non-magnetic surface, such as the now-trendy glass door refrigerators, you’ll need to buy a magnetic sticker separately or go for the more expensive “Qixi bundle.”
+
+Given how weak this included magnet is, I really doubt the bundled sheet in the “Qixi bundle” is much better—and the 10 extra RMB for that set could buy you at least 10 3M magnet sheets. If you really need this, just buy the 3M version yourself.
+
+### Thoughtful Design Touches
+
+The main body of the Quote/0 shell is matte-finished. However, there’s a small area at the bottom right corner with a glossy finish, noticeably different from the rest. At a certain angle under the light, you can see the shape of this area.
+
+![A small reflective area](./assets/small-reflective-pattern.webp)
+
+In fact, this shape is the logo for the Quote/0 companion app, “Dot.” Using a glossy material to present this logo is quite a clever little design. I was genuinely delighted the first time I discovered it.
+
+The label on the back, with information like model number and voltage, is also done with a similar process, though it’s hard to capture in a photo.
+
+While this is a neat touch, you might also spot in the photo that there are already some scratches on my still-new Quote/0. These are probably due to the matte finish—I personally don’t care about cosmetic scratches on this sort of product, but they’re almost inevitable. If it bothers you, think twice before buying.
+
+## Network Connection and Hardware Initialization
+
+### Connectivity Issues: Cost Constraints
+
+Like many other Quote/0 users online, I encountered connectivity issues on first use.
+
+After some fiddling and repeated attempts, I found the underlying issue was simple: As mentioned earlier, perhaps for cost reasons, this Wi-Fi and Bluetooth chip only costs a few RMB. That means it only supports 2.4GHz Wi-Fi, and the chip’s Wi-Fi reception isn’t great.
+
+In practice, with a decent router, this chip still can’t get a signal if there’s even one wall between it and the router. By comparison, my phone can pick up a strong 5GHz signal through two walls into the kitchen, and other 2.4GHz smart home devices don’t completely fail after just one wall.
+
+Ultimately, since there are no power outlets in my bedroom where the router is in line-of-sight, the rest of my testing involved leaving the Quote/0 in the living room facing the router while I ran back and forth between my bedroom computer and the living room.
+
+### Where Are the Error Messages?
+
+Beyond limited performance, lack of clear error messaging is another flaw.
+
+Whether it’s poor Wi-Fi signal on initial setup or later moving it to a weak spot and failing to refresh, the device gives almost no direct indication that it’s a signal issue.
+
+Early on, when I wasn’t familiar with the device logic, it was hard to tell whether something was wrong with the pushed config, if the device switching was buggy, or if it was just not getting a Wi-Fi signal.
+
+### USB Port for Firmware Only
+
+Quote/0 can connect to a computer via USB Type-C and update its firmware via a web-based tool. The process is smooth and the UI is straightforward—a thumbs-up for that.
+
+But this Type-C port is only for firmware upgrades, and has no configuration capabilities. For example, you can’t set up Wi-Fi for the device through this port—all that must go through the mobile app over Bluetooth.
+
+I can understand the thinking: Dot. App is the entry point for the entire ecosystem, and Quote/0 is intended as its first product, so future products will go through the same flow. But this causes issues, including the requirement (explained later) that all pushes run through the Dot. server. Whether that design choice is good or bad is subjective.
+
+## API and Data Update Mechanism
+
+### Time for the Microsoft Renaming Department
+
+While writing this, I’ve been holding in a rant: the product naming is **just terrible!**
+
+First, the product is called “Quote/0,” and the ecosystem app is called “Dot.”—both basically unsearchable names. The API documentation is at “[Dot. Manual](https://dot.mindreset.tech/docs),” and the URL has nothing to do with Quote/0, making it even harder for a web search to turn up the documentation.
+
+The last time I saw such a bad name was “Follow,” but even that got renamed to [Folo](https://folo.is/). I hope Quote/0 can at least optimize its documentation’s discoverability.
+
+Sometimes it almost seems like, thanks to products like this, the Microsoft Renaming Department (rumored but, at least in my time at Microsoft, never confirmed to exist) really does serve a purpose.
+
+### Basic API Use
+
+From the documentation site above, there’s a range of docs, but only [API](https://dot.mindreset.tech/docs/server/template/api) is relevant to actual API calls.
+
+The API is quite straightforward: after registering for an API key in the app, you put it as a Bearer token in the header, and include the `deviceId` (which is just the device’s MAC address) in the request body.
+
+### Card Switching Logic
+
+Quote/0 is fundamentally built around various “cards”—multiple types of content that you can put in a rotation, with the device swapping them at preset intervals.
+
+But for API calls, the switching logic is different: The two APIs ([Text API](https://dot.mindreset.tech/docs/server/template/api/text_api) and [Image API](https://dot.mindreset.tech/docs/server/template/api/image_api)) correspond to two specific cards. When either API is called and the JSON includes `"refreshNow": true`, if the device is in an “active state,” it will switch to that card with negligible delay. If it’s already displaying that card, the content is updated instantly.
+
+Based on the docs and my experience, “active state” should pretty much mean “being charged.” However, on my first day, even while plugged in I sometimes saw (from the app) that the device was not active. This may have been due to some special check, a weird bug, or just network flakiness.
+
+So, if you need API calls to display content immediately on Quote/0, make sure it’s always plugged in, and somewhere with solid Wi-Fi and minimal interference. If you can’t meet both of those, this product might not be right for you.
+
+### Rendering Arbitrary Content Tricks
+
+Quote/0’s image API allows you to push a full black and white image to fill the screen.
+
+The trick, then, is to generate whatever content you want as a full-screen image and push it via the image API. This lets you use layouts, font sizes, or typefaces not supported by the text API.
+
+The official Taobao page doesn’t specify the screen’s resolution. I couldn’t find that data anywhere online either, but in the official image API docs, there’s a sample full-screen image for pushing to the device; after converting that sample’s base64 to a PNG file, its size is 296 x 152.
+
+That should be the screen’s pixel count. If you’re generating your own images, use this as your guide.
+
+### Don’t Trust the Cloud Service
+
+Possibly to build a broader ecosystem, Quote/0 requires all API requests to be routed through the Dot. server, then passed along to the device (and letting the app preview incoming content).
+
+But previous smart home experiences (looking at you, Xiaomi) have already shown us: any dependency on the cloud is unreliable, and smart home devices that mandate a connection will eventually let you down.
+
+This unreliable design makes it difficult for the device to be a crucial part of the smart home. I’ve seen users who want to display smart home data on Quote/0. If you want more than a toy, you might want to reconsider.
+
+## Easter Egg
+
+Since I haven’t figured out how I’ll use this device yet, here’s a little easter egg for now:
+
+You can use the button below to send my device a message. If your message doesn’t get overridden by someone else, I just might see it next time I walk past at home!
+
+export const Quote0MessageButton = () => {
+  const sendMessage = async () => {
+    const message = prompt('Please enter your message:');
+    if (!message) {
+      alert('Write something!');
+      return;
+    }
+    let charCount = 0;
+    for (let char of message) {
+      if (char.match(/[\u4e00-\u9fff]/)) {
+        charCount += 1;
+      } else {
+        charCount += 0.5;
+      }
+    }
+    if (charCount > 42) {
+      alert('Message too long! Please keep it within 42 Chinese characters or 84 English characters.');
+      return;
+    }
+    const signature = prompt('Please enter your name:');
+    if (!signature) signature = '#anonymous#';
+    try {
+      const response = await fetch('https://dot.mindreset.tech/api/open/text', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer dot_app_EAxiQBkBbwZoZUshfojnNHMLgCNYYcumxYBhaWaoFtdxJnCogndTNlewAdGtSlOA',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          refreshNow: true,
+          deviceId: "9C9E6E3B7D50",
+          title: "你有新的留言！",
+          message: message,
+          signature: signature,
+          link: "https://sqybi.com/blog/things-you-didnt-know-about-quote-0-before-buying/"
+        })
+      });
+      if (response.ok) {
+        alert('Message sent successfully!');
+      } else {
+        alert('Failed to send. Please try again later.');
+      }
+    } catch (error) {
+      alert('Network error. Please try again later.');
+    }
+  };
+
+  return (
+    <button
+      onClick={sendMessage}
+      style={{
+        background: "#0066cc",
+        color: "white",
+        padding: "5px 10px",
+        borderRadius: "0.5em",
+        border: "none",
+        cursor: "pointer",
+      }}
+    >
+      Leave a message
+    </button>
+  );
+};
+
+<Quote0MessageButton />

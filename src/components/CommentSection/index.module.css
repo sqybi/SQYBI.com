@@ -75,11 +75,11 @@
 
 .comment-list .comment-box .comment-content {
   border: none;
-  border-radius: 0.1rem 0.5rem 0.1rem 0.1rem;
+  border-radius: 0.2rem 0.5rem 0.2rem 0.2rem;
   box-shadow: 0rem 0rem 0.3rem var(--ifm-color-primary);
   margin: 10px 0 0 70px;
   padding: 20px 20px 1px 20px;
-  font-size: 95%;
+  font-size: 80%;
   -webkit-transition: box-shadow 0.5s linear;
   transition: box-shadow 0.5s linear;
 }
@@ -131,14 +131,13 @@
   border-radius: 0.2rem;
   width: calc(33% - 20px);
   padding: 5px;
-  margin: 0 10px 10px;
+  margin: 10px 10px 5px 10px;
   color: var(--ifm-font-color-base);
   text-shadow: 0 0 0.75px var(--ifm-color-gray-700);
 }
 
-.comment-input input::placeholder {
-  color: var(--shade-600);
-  text-shadow: 0 0 0.75px var(--shade-300);
+.comment-input input:placeholder {
+  text-shadow: 0 0 0.75px rgba(0, 0, 0, 0);
 }
 
 .comment-input input:focus {
@@ -154,14 +153,14 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-[data-theme="dark"] .comment-input input::placeholder {
-  color: var(--shade-400);
+[data-theme="dark"] .comment-input input:placeholder {
+  text-shadow: 0 0 0.75px rgba(0, 0, 0, 0);
 }
 
 .comment-input button {
   display: inline-block;
   padding: 5px 5px;
-  margin: 5px 0 0 0;
+  margin: 10px 0 0 0;
   border-radius: 0.2rem;
   cursor: pointer;
   text-align: center;
@@ -205,21 +204,4 @@
 
 .comment-input button.comment-cancel-reply .info-text {
   font-size: 70%;
-}
-
-.comment-input > div {
-  font-family: var(--ifm-font-family-base);
-  color: var(--ifm-font-color-base);
-  text-shadow: 0 0 0.75px var(--ifm-color-gray-700);
-  border-color: var(--shade-300) !important;
-}
-
-[data-theme="dark"] .comment-input > div {
-  border-color: var(--shade-600) !important;
-  text-shadow: 0 0 0.75px var(--ifm-color-gray-300);
-}
-
-[data-theme="dark"] .comment-input > div > div:first-of-type {
-  background: var(--shade-800) !important;
-  color: var(--ifm-font-color-base);
 }
