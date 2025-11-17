@@ -40,14 +40,6 @@ const links = [
     ],
     [
         {
-            owner: 'MÖBIUS',
-            title: '莫比乌斯',
-            description: '这个博客，不是碎片的“我”，而是真实的“我”，当然也有可能是让虚伪或真相厌恶的“我”。',
-            comment: <Translate>虽然不一定全部认同这个博客的观点，但是很喜欢它的行文方式和美术设计。</Translate>,
-            image: '/img/links/mobius.png',
-            link: 'https://onojyun.com/',
-        },
-        {
             owner: 'Zeee',
             title: 'VELAS 电波站',
             description: '欢迎来到Velas电波站！',
