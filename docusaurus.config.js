@@ -31,7 +31,6 @@ const config = {
   deploymentBranch: 'main', // The branch of your site that GitHub pages will deploy from.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -60,6 +59,10 @@ const config = {
   markdown: {
     format: 'detect',
     mermaid: true,
+    emoji: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn'
+    }
   },
 
   presets: [
