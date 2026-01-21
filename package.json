@@ -43,7 +43,7 @@
     "@docusaurus/module-type-aliases": "^3.7.0",
     "@docusaurus/types": "^3.7.0",
     "dotenv-cli": "^7.4.4",
-    "wrangler": "^4.47.0"
+    "wrangler": "^4.59.1"
   },
   "browserslist": {
     "production": [
