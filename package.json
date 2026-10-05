@@ -29,7 +29,7 @@
     "@milkdown/kit": "^7.15.5",
     "@milkdown/react": "^7.17.1",
     "@milkdown/theme-nord": "^7.17.1",
-    "axios": "^1.18.0",
+    "axios": "^1.20.0",
     "clsx": "^2.1.1",
     "moment": "^2.31.0",
     "openai": "^4.104.0",
